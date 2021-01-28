@@ -1,0 +1,55 @@
+.service {
+  display: flex;
+  flex-wrap: wrap;
+  &__title {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    @media screen and (min-width: 1000px) {
+      text-align: left;
+    }
+  }
+  &__list {
+    order: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-self: flex-start;
+    width: 100%;
+    @media screen and (min-width: 1000px) {
+      width: 60%;
+    }
+  }
+  &__item {
+    width: calc(100% / 2 * 1 - 10px);
+    min-height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    @media screen and (min-width: 580px) {
+      width: calc(100% / 12 * 4 - 10px);
+      min-height: 79px;
+      font-size: 18px;
+    }
+  }
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    @media screen and (min-width: 1000px) {
+      width: 40%;
+    }
+  }
+  &:nth-child(odd) {
+    .service__list {
+      @media screen and (min-width: 1000px) {
+        order: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,218 @@
+.main-slider {
+  background-size: cover;
+  background-position: center center;
+  &-container {
+    padding-bottom: 20px;
+    min-height: 400px;
+    @media screen and (min-width: 900px) {
+      display: flex;
+    }
+    @media screen and (min-width: 1000px) {
+      min-height: 672px;
+      padding-bottom: 40px;
+    }
+  }
+  &__info {
+    
+  }
+  &__title {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 25px;
+    @media screen and (min-width: 1000px) {
+      padding: 100px 0 39px;
+      font-size: 48px;
+    }
+  }
+  &__ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  &__li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    font-size: 14px;
+    line-height: 14px;
+    @media screen and (min-width: 1000px) {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    &::before {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 12px;
+      background: rgba(45, 95, 93, 0.5);
+      border-radius: 6px;
+      margin-right: 12px;
+      @media screen and (min-width: 1000px) {
+        width: 15px;
+        height: 15px;
+        border-radius: 8px;
+      }
+    }
+  }
+  &__reviews {
+    align-self: flex-end;
+    margin-left: 40px;
+    @media screen and (min-width: 1100px) {
+      margin-left: 240px;
+    }
+  }
+  &__video {
+    display: flex;
+    align-items: center;
+    @media screen and (min-width: 500px) {
+      justify-content: center;
+      margin-left: -150px;
+      align-items: flex-end;
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: 900px) {
+      margin-left: 0;
+    }
+    @media screen and (min-width: 1000px) {
+      margin-left: -150px;
+    }
+    &-button {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(180deg, #2D5F5D 0%, #265077 100%);
+      box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.5);
+      border-radius: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      @media screen and (min-width: 500px) {
+        margin-right: 28px;
+      }
+      @media screen and (min-width: 700px) {
+        width: 103px;
+        height: 103px;
+      }
+      &::before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 12px 0 12px 22px;
+        border-color: transparent transparent transparent #ffffff;
+        margin-left: 8px;
+        @media screen and (min-width: 700px) {
+          border-width: 18.5px 0 18.5px 32px;
+        }
+      }
+    }
+    &-text {
+      font-size: 12px;
+      font-weight: bold;
+      color: #fff;
+      background-color: rgba(0,0,0,0.3);
+      padding: 5px;
+      position: relative;
+      .line {
+        display: none;
+        width: 20px;
+        height: 14px;
+        position: absolute;
+        top: 0;
+        right: calc(100% + 5px);
+        @media screen and (min-width: 500px) {
+          display: block;
+        }
+      }
+    }
+  }
+}
+.show-all-reviews {
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  a {
+    color: #fff;
+    font-size: 12px;
+  }
+}
+.call-master {
+  padding-top: 20px;
+  form {
+    @media screen and (min-width: 500px) {
+      display: flex;
+      justify-content: center;
+    }
+    @media screen and (min-width: 1000px) {
+      justify-content: flex-start;
+    }
+  }
+  input {
+    height: 40px;
+    width: 200px;
+    border: 1px solid #2D5F5D;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    margin: auto;
+    @media screen and (min-width: 500px) {
+      margin: 0;
+      height: 47px;
+    }
+    &[type=tel] {
+      margin-bottom: 10px;
+      padding-left: 18px;
+      @media screen and (min-width: 500px) {
+        margin-right: 9px;
+      }
+      &::placeholder {
+        font-size: 14px;
+        color: #a4a4a5;
+      }
+    }
+    &[type=submit] {
+      background: linear-gradient(180deg, #494B68 0%, #2D5F5D 100%);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-sizing: border-box;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.41);
+      color: #fff;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      cursor: pointer;
+    }
+  }
+}
+.raiting-block {
+  display: flex;
+  justify-content: center;
+}
+.rait-box {
+  margin: 0 10px;
+  span {
+    color: #fff;
+    font-size: 12px;
+    font-style: italic;
+    background-color: rgba(0,0,0,0.3);
+  }
+  &__box {
+    min-width: 94px;
+    height: 47px;
+    background: linear-gradient(180deg, #494B68 0%, #2D5F5D 100%), #21B021;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px 6px rgba(255, 255, 255, 0.41);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    img {
+      margin-right: 3px;
+    }
+  }
+}

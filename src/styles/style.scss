@@ -1,0 +1,51 @@
+@import 'normalize.scss';
+@import 'roboto.scss';
+@import 'header-block.scss';
+@import 'main-slider.scss';
+@import 'services.scss';
+@import 'percent-form.scss';
+@import 'service-price.scss';
+@import 'advantages.scss';
+@import 'specialists.scss';
+@import 'stages.scss';
+@import 'finished-works.scss';
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+}
+.wrapper {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px; 
+}
+img {
+    max-width: 100%;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  font-size: 25px;
+  @media screen and (min-width: 500px) {
+    font-size: 36px;
+  }
+}
+h3 {
+  font-size: 20px;
+  @media screen and (min-width: 500px) {
+    font-size: 24px;
+  }
+}
+.shadow-btn {
+  background: #F4F4F4;
+  box-shadow: inset -4px 0px 15px rgba(0, 0, 0, 0.16);
+  border-radius: 6px;
+  &:hover {
+    box-shadow: inset 0px 0px 25px #2D5F5D;
+  }
+}

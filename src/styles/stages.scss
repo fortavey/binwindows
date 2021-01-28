@@ -1,0 +1,196 @@
+.stages {
+  &__container {
+    position: relative;
+    @media screen and (min-width: 800px) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  &__list {
+    @media screen and (min-width: 1100px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+    }
+  }
+  &__img {
+    display: none;
+    margin-right: -86px;
+    z-index: 2;
+    position: relative;
+    @media screen and (min-width: 1100px) {
+      display: block;
+    }
+  }
+  .visit-form {
+    flex-shrink: 0;
+    max-width: 384px;
+    height: 633px;
+    background: linear-gradient(161.66deg, #2D5F5D -6.11%, rgba(38, 80, 119, 0.97) 87.55%);
+    box-shadow: 8px 4px 25px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    @media screen and (min-width: 500px) {
+      padding: 47px 47px 53px;
+    }
+    @media screen and (min-width: 1100px) {
+      margin: 0;
+    }
+    &__title {
+      margin-bottom: 30px;
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    &__item {
+      height: 47px;
+      background: #FFFFFF;
+      border: 1px solid #21B021;
+      box-sizing: border-box;
+      box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      margin-bottom: 40px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 12px;
+      padding-right: 12px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      &.yes-select::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 3.5px 0 3.5px;
+        border-color: #000000 transparent transparent transparent;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+      }
+      span.sp {
+        font-weight: normal;
+        position: absolute;
+        bottom: calc(100% + 5px);
+        color: #fff;
+        left: 0;
+      }
+    }
+    &__phone {
+    }
+    &__date {
+      width: 100%;
+    }
+    &__district {
+    }
+    &__repair-type {
+    }
+    input {
+      &[type=date] {
+        border: none;
+        width: 100%;
+        outline: none;
+
+      }
+      &[type=tel] {
+        border: none;
+        width: 100%;
+        outline: none;
+      }
+    }
+    &__submit {
+      height: 47px;      
+      background: linear-gradient(180deg, #59C659 0%, #166B16 100%), #2FC4B2;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.41);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff; 
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
+.calendar-picker {
+  position: relative;
+  z-index: 2;
+}
+
+.stage {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  &__image {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 1px solid #F17808;
+    flex-shrink: 0;
+    margin-right: 10px;
+    @media screen and (min-width: 500px) {
+      width: 127px;
+      height: 127px;
+      border-radius: 70px;
+    }
+  }
+  &__number {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 70px;
+    line-height: 70px;
+    color: #21B021;
+    font-weight: bold;
+    @media screen and (min-width: 500px) {
+      font-size: 96px;
+      line-height: 96px;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__text {
+    max-width: 300px;
+    font-weight: 500;
+  }
+}
+
+.choose-value {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+  &__container {
+    max-width: 500px;
+    height: 300px;
+    overflow-y: scroll;
+    background-color: #fff;
+    padding: 20px;
+    border-top: 20px solid #fff;
+    border-bottom: 20px solid #fff;
+  }
+  &__item {
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 7px;
+    &:hover {
+      background-color: #ededed;
+    }
+  }
+}

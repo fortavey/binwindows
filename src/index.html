@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Webpack App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src='https://unpkg.com/v-calendar'></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <body>
+    <header class="site-header">
+      <div class="top-line">
+        <div class="wrapper top-line__container">
+          <div class="logo">
+            <img class="logo__image" src="./assets/img/logo.png" alt="logo">
+          </div>
+          <div class="site-header-info">
+            <span class="use-msgs">Задайте вопрос на прямую в:</span>
+            <div class="social">
+              <div class="social__item">
+                <img class="social__image" src="./assets/img/skype.svg" alt="skype">
+                <div class="social__title">Skype</div>
+              </div>
+              <div class="social__item">
+                <img class="social__image" src="./assets/img/whatsapp.svg" alt="skype">
+                <div class="social__title">WhatsApp</div>
+              </div>
+              <div class="social__item">
+                <img class="social__image" src="./assets/img/email.svg" alt="skype">
+                <div class="social__title">Email</div>
+              </div>
+            </div>
+            <div class="top-info">
+              <div class="phone"><img src="./assets/img/phone.svg" alt="icon">+7 459 445 15 51</div>
+              <div class="work-time">Прием заявок с <strong>7:00</strong> до <strong>23:00</strong> без выходных</div>
+            </div>
+          </div>
+          <div class="menu-button">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-line">
+        <div class="wrapper">
+          <nav>
+            <ul>     
+              <li class="menu-item-has-children">
+                <a href="">Услуги</a>
+                <ul class="sub-menu">
+                  <li><a href="">Ремонт пластиковых окон</a></li>
+                  <li><a href="">Ремонт деревянных окон</a></li>
+                  <li><a href="">Ремонт аллюминиевых окон</a></li>
+                  <li><a href="">Москитные сетки</a></li>
+                  <li><a href="">Аксессуары</a></li>
+                  <li><a href="">Замена стеклопакетов</a></li>
+                  <li><a href="">Жалюзи</a></li>
+                </ul>
+              </li>
+              <li><a href="">О компании</a></li>
+              <li><a href="">Цены</a></li>
+              <li><a href="">Акции</a></li>
+              <li><a href="">Калькулятор</a></li>
+              <li><a href="">Работы и отзывы</a></li>
+              <li><a href="">Блог</a></li>
+              <li><a href="">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="main-slider" style="background-image: url(./assets/img/main-slider.png);">
+      <div class="wrapper">
+        <div class="main-slider-container">
+          <div class="main-slider__info">
+            <h1 class="main-slider__title">
+              Ремонт окон в Москве <br>
+              <span style="font-weight: 400;">и Московсокой области</span> 
+            </h1>
+            <ul class="main-slider__ul">
+              <li class="main-slider__li">Бесплатный выезд мастера!</li>
+              <li class="main-slider__li">Работаем без предоплаты</li>
+              <li class="main-slider__li">Диагностика в подарок!</li>
+              <li class="main-slider__li">2 года гарантии по договору</li>
+            </ul>
+            <div class="call-master">
+              <form action="">
+                <input type="tel" placeholder="+7 (999) 992  99 99">
+                <input type="submit" value="Вызвать мастера">
+              </form>
+            </div>
+          </div>
+          <div class="main-slider__reviews">
+            <div class="main-slider__video">
+              <div class="main-slider__video-button">
+              </div>
+              <div class="main-slider__video-text">
+                <div class="line">
+                  <img src="./assets/img/line.svg" alt="icon"> 
+                </div>
+                Смотрите короткое видео <br> о компании</div>
+            </div>
+            <div class="raiting-block">
+              <div class="rait-box rating">
+                <span>Яндекс рейтинг</span>
+                <div class="rait-box__box">
+                  <img src="./assets/img/star.svg" alt="star">
+                  4.7
+                </div>
+              </div>
+              <div class="rait-box rev-counter">
+                <span>Отзывы</span>
+                <div class="rait-box__box">
+                  <img src="./assets/img/star.svg" alt="star">
+                  100+
+                </div>
+              </div>
+            </div>
+            <div class="show-all-reviews"><a href="">Смотреть все отзывы</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="interval" style="height: 50px;"></div>
+    <h2 style="text-align: center;">Услуги</h2>
+    <div class="interval" style="height: 50px;"></div>
+    <div class="services">
+      <div class="wrapper">
+        <div class="service">
+          <h3 class="service__title">Ремонт пластиковых окон</h3>
+          <div class="service__list">
+            <div class="service__item shadow-btn">Регулировка</div>
+            <div class="service__item shadow-btn">Замена уплотнителя</div>
+            <div class="service__item shadow-btn">Устранение запотевания</div>
+            <div class="service__item shadow-btn">Устранение продувания</div>
+            <div class="service__item shadow-btn">Замена оконных створок</div>
+            <div class="service__item shadow-btn">Замена битого стеклопакета</div>
+            <div class="service__item shadow-btn">Замена ручки</div>
+            <div class="service__item shadow-btn">Герметизация и шумоизоляция</div>
+            <div class="service__item shadow-btn">Утепление</div>
+            <div class="service__item shadow-btn">Ремонт ПВХ дверей</div>
+            <div class="service__item shadow-btn">Замена фурнитуры</div>
+          </div>
+          <div class="service__image">
+            <img src="./assets/img/service1.png" alt="img">
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Ремонт деревянных окон</h3>
+          <div class="service__list">
+            <div class="service__item shadow-btn">Замена уплотнителя</div>
+            <div class="service__item shadow-btn">Покраска и восстановление</div>
+            <div class="service__item shadow-btn">Утепление</div>
+            <div class="service__item shadow-btn">Замена стеклопакета</div>
+          </div>
+          <div class="service__image">
+            <img src="./assets/img/service2.png" alt="img">
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Ремонт аллюминиевых окон</h3>
+          <div class="service__list">
+            <div class="service__item shadow-btn">Замена уплотнителя</div>
+            <div class="service__item shadow-btn">Регулировка окон</div>
+            <div class="service__item shadow-btn">Утепление</div>
+            <div class="service__item shadow-btn">Поменять стеклопакета</div>
+          </div>
+          <div class="service__image">
+            <img src="./assets/img/service3.png" alt="img">
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Москитные сетки</h3>
+          <div class="service__list">
+            <div class="service__item shadow-btn">Замена</div>
+            <div class="service__item shadow-btn">Антикошка</div>
+            <div class="service__item shadow-btn">Антипыльца</div>
+            <div class="service__item shadow-btn">Антипыль</div>
+            <div class="service__item shadow-btn">Дверные</div>
+            <div class="service__item shadow-btn">Рулонные </div>
+            <div class="service__item shadow-btn">Плиссе</div>
+            <div class="service__item shadow-btn">Раздвижные</div>
+            <div class="service__item shadow-btn">Рамочные</div>
+          </div>
+          <div class="service__image">
+            <img src="./assets/img/service4.png" alt="img">
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Аксессуары</h3>
+          <div class="service__list">
+            <div class="service__item shadow-btn">Энергосберегающий стеклопакет</div>
+            <div class="service__item shadow-btn">Оконные ручки</div>
+            <div class="service__item shadow-btn">Клапаны приточной вентиляции</div>
+            <div class="service__item shadow-btn">Замок блокировки</div>
+            <div class="service__item shadow-btn">Оконные петли</div>
+            <div class="service__item shadow-btn">Тонировка стеклопакетов</div>
+            <div class="service__item shadow-btn">Козырьки и отливы</div>
+          </div>
+          <div class="service__image">
+            <img src="./assets/img/service5.png" alt="img">
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Замена стеклопакетов</h3>
+          <div class="service__list">
+            <div class="service__item shadow-btn">Триплекс</div>
+            <div class="service__item shadow-btn">Энергосберегающие</div>
+            <div class="service__item shadow-btn">Армированные</div>
+            <div class="service__item shadow-btn">С пленочным покрытием</div>
+            <div class="service__item shadow-btn">Витражные</div>
+            <div class="service__item shadow-btn">Шумопоглощающие</div>
+            <div class="service__item shadow-btn">С декоративной расскладкой</div>
+            <div class="service__item shadow-btn">С инертным газом</div>
+            <div class="service__item shadow-btn">Стекло стематил</div>
+          </div>
+          <div class="service__image">
+            <img src="./assets/img/service6.png" alt="img">
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="service__title">Жалюзи</h3>
+          <div class="service__list">
+            <div class="service__item shadow-btn">Деревянные</div>
+            <div class="service__item shadow-btn">Аллюминиевые</div>
+            <div class="service__item shadow-btn">Вертикальные</div>
+            <div class="service__item shadow-btn">Тканевые</div>
+            <div class="service__item shadow-btn">Бамбуковые</div>
+            <div class="service__item shadow-btn">День ночь</div>
+            <div class="service__item shadow-btn">Закрытого типа</div>
+            <div class="service__item shadow-btn">Открытого типа</div>
+            <div class="service__item shadow-btn">Джутовые</div>
+          </div>
+          <div class="service__image">
+            <img src="./assets/img/service7.png" alt="img">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="percent-form">
+      <div class="wrapper">
+        <div class="percent-form__container">
+          <div class="percent-form__form" style="background-image: url(./assets/img/percent-form-bg.png), linear-gradient(161.66deg, #2D5F5D -6.11%, rgba(38, 80, 119, 0.97) 87.55%);">
+            <div class="percent-form__title">
+              Заполните форму <br>
+              и получите <br> 
+              <strong>-15%</strong>
+              <span>на установку окон<span>
+            </div>
+            <form action="">
+              <input type="text" placeholder="Ваше имя">
+              <input type="tel" placeholder="+7 (999) 992  99 99">
+              <input type="submit" value="Получить скидку">
+            </form>
+          </div>
+          <div class="percent-form__image">
+            <img src="./assets/img/percent-form.png" alt="img">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="interval" style="height: 50px;"></div>
+    <h2 style="text-align: center;">Цены на услуги</h2>
+    <div class="interval" style="height: 50px;"></div>
+    <div class="service-price">
+      <div class="wrapper">
+        <div class="service-price__container">
+          <div class="service-price__item">
+            <img src="./assets/img/service-price.png" alt="img" class="service-price__img">
+            <div class="service-price__title">Замена <br> стеклопакета</div>
+            <div class="service-price__price">от <strong>3500</strong> руб/м2</div>
+          </div>
+          <div class="service-price__item">
+            <img src="./assets/img/service-price.png" alt="img" class="service-price__img">
+            <div class="service-price__title">Установка оконных <br> ручек</div>
+            <div class="service-price__price">от <strong>500</strong> руб/м2</div>
+          </div>
+          <div class="service-price__item">
+            <img src="./assets/img/service-price.png" alt="img" class="service-price__img">
+            <div class="service-price__title">Ремонт подоконников</div>
+            <div class="service-price__price">от <strong>1500</strong> руб/м2</div>
+          </div>
+          <div class="service-price__item">
+            <img src="./assets/img/service-price.png" alt="img" class="service-price__img">
+            <div class="service-price__title">Монтаж приточных <br> клапанов</div>
+            <div class="service-price__price">от <strong>3500</strong> руб/м2</div>
+          </div>
+          <div class="service-price__item">
+            <img src="./assets/img/service-price.png" alt="img" class="service-price__img">
+            <div class="service-price__title">Герметизация <br> и шумоизоляция окон</div>
+            <div class="service-price__price">от <strong>350</strong> руб/м2</div>
+          </div>
+          <div class="service-price__item">
+            <img src="./assets/img/service-price.png" alt="img" class="service-price__img">
+            <div class="service-price__title">Установка москитных <br> сеток</div>
+            <div class="service-price__price">от <strong>950</strong> руб/м2</div>
+          </div>
+        </div>
+        <div class="service-price__more"><a href="">Смотреть все цены</a></div>
+      </div>
+    </div>
+    <div class="interval" style="height: 50px;"></div>
+    <h2 style="text-align: center;">Наши преимущества</h2>
+    <div class="interval" style="height: 50px;"></div>
+    <div class="advantages">
+      <div class="wrapper">
+        <div class="advantages__container">
+          <div class="advantages__item">
+            <img src="./assets/img/adv1.png" alt="icon" class="advantages__image">
+            <div class="advantages__title">Собственное производство</div>
+            <div class="advantages__desc">Описание преимущества</div>
+          </div>
+          <div class="advantages__item">
+            <img src="./assets/img/adv2.png" alt="icon" class="advantages__image">
+            <div class="advantages__title">Качественная диагностика</div>
+            <div class="advantages__desc">Описание преимущества</div>
+          </div>
+          <div class="advantages__item">
+            <img src="./assets/img/adv3.png" alt="icon" class="advantages__image">
+            <div class="advantages__title">Приез мастера в течении 1 часа</div>
+            <div class="advantages__desc">Описание преимущества</div>
+          </div>
+          <div class="advantages__item">
+            <img src="./assets/img/adv4.png" alt="icon" class="advantages__image">
+            <div class="advantages__title">Работаем по Москве и Московской области</div>
+            <div class="advantages__desc">Описание преимущества</div>
+          </div>
+          <div class="advantages__item">
+            <img src="./assets/img/adv5.png" alt="icon" class="advantages__image">
+            <div class="advantages__title">Безналичный расчет</div>
+            <div class="advantages__desc">Описание преимущества</div>
+          </div>
+          <div class="advantages__item">
+            <img src="./assets/img/adv6.png" alt="icon" class="advantages__image">
+            <div class="advantages__title">Многолетний опыт</div>
+            <div class="advantages__desc">Описание преимущества</div>
+          </div>
+          <div class="advantages__item">
+            <img src="./assets/img/adv7.png" alt="icon" class="advantages__image">
+            <div class="advantages__title">Мастера в каждом районе Москвы</div>
+            <div class="advantages__desc">Описание преимущества</div>
+          </div>
+          <div class="advantages__item">
+            <img src="./assets/img/adv8.png" alt="icon" class="advantages__image">
+            <div class="advantages__title">Гарантия 2 года</div>
+            <div class="advantages__desc">Описание преимущества</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="interval" style="height: 50px;"></div>
+    <h2 style="text-align: center;">Наши специалисты</h2>
+    <div class="interval" style="height: 50px;"></div>
+    <div class="specialists">
+      <div class="wrapper">
+        <div class="specialists__container">
+          <div class="specialists__vertical">
+            <div class="vertical-arrow vertical-arrow--top" @click="changeIndex(true)"></div>
+            <div class="vertical-arrow vertical-arrow--bottom" @click="changeIndex(false)"></div>
+
+            <div 
+              class="small-specialist small-specialist--active">
+              <img class="small-specialist__img" :src="list[currentIndex].image" alt="img">
+              <div class="small-specialist__title">{{ list[currentIndex].name }}</div>
+              <div class="small-specialist__position">{{ list[currentIndex].positionShort }}</div>
+            </div>
+            <div 
+              class="small-specialist">
+              <img class="small-specialist__img" :src="list[nextIndex].image" alt="img">
+              <div class="small-specialist__title">{{ list[nextIndex].name }}</div>
+              <div class="small-specialist__position">{{ list[nextIndex].positionShort }}</div>
+            </div>
+
+          </div>
+          <div class="specialists__full">
+            <div class="big-specialist">
+              <img :src="list[currentIndex].image" alt="img" class="big-specialist__img">
+              <div class="big-specialist__info">
+                <div class="big-specialist__name">{{ list[currentIndex].name }}</div>
+                <div class="big-specialist__position">{{ list[currentIndex].positionFull }}</div>
+                <div class="big-specialist__experience"><strong>Стаж работы:</strong>{{ list[currentIndex].expirience }}</div>
+                <div class="big-specialist__education"><strong>Образование:</strong> {{ list[currentIndex].education }}</div>
+                <div class="big-specialist__desc">
+                  {{ list[currentIndex].desc }}
+                </div>
+              </div>
+            </div>
+            <div class="slider-manage">
+              <div class="slider-manage__arrow slider-manage__arrow--left" @click="changeIndex(false)">
+                <img src="./assets/img/manage-arrow.png" alt="arrow">
+              </div>
+              <div class="slider-manage__user slider-manage__user--prev" @click="changeIndexOnClick(prevIndex)">
+                <div class="slider-manage__user-name">{{ list[prevIndex].name }}</div>
+                <div class="slider-manage__user-position">({{ list[prevIndex].positionShort }})</div>
+              </div>
+              <div class="slider-manage__user slider-manage__user--next" @click="changeIndexOnClick(nextIndex)">
+                <div class="slider-manage__user-name">{{ list[nextIndex].name }}</div>
+                <div class="slider-manage__user-position">({{ list[nextIndex].positionShort }})</div>
+              </div>
+              <div class="slider-manage__arrow slider-manage__arrow--right" @click="changeIndex(true)">
+                <img src="./assets/img/manage-arrow.png" alt="arrow">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="interval" style="height: 50px;"></div>
+    <h2 style="text-align: center;">Этапы работы</h2>
+    <div class="interval" style="height: 50px;"></div>
+    <div class="stages">
+      <div class="wrapper">
+        <div class="stages__container">
+          <div class="stages__list">
+            <div class="stage">
+              <div class="stage__image">
+                <div class="stage__number">1</div>
+                <img class="stage__img" src="./assets/img/stage1.png" alt="img">
+              </div>
+              <div class="stage__text">Мастер приежет на указанный адресс и оценит стоимость работ</div>
+            </div>
+            <div class="stage">
+              <div class="stage__image">
+                <div class="stage__number">2</div>
+                <img class="stage__img" src="./assets/img/stage2.png" alt="img">
+              </div>
+              <div class="stage__text">Заключаем договор и приступаем к ремонту БЕЗ ПРЕДОПЛАТЫ</div>
+            </div>
+            <div class="stage">
+              <div class="stage__image">
+                <div class="stage__number">3</div>
+                <img class="stage__img" src="./assets/img/stage3.png" alt="img">
+              </div>
+              <div class="stage__text">Выполняем ремонт и Вы принимаете работу</div>
+            </div>
+            <div class="stage">
+              <div class="stage__image">
+                <div class="stage__number">4</div>
+                <img class="stage__img" src="./assets/img/stage4.png" alt="img">
+              </div>
+              <div class="stage__text">Подписываем Договор (гарантия). Оплачиваете. Вручаем Вам подарок</div>
+            </div>
+          </div>
+          <img src="./assets/img/stages.png" alt="img" class="stages__img">
+          <div class="visit-form">
+            <div class="visit-form__title">
+              Вызвать мастера <strong>БЕСПЛАТНО</strong> <br>
+              по тел: +7 (495) 000-00-00 <br>
+              или <br>
+              <strong>заполните форму</strong>
+            </div>
+            <div class="visit-form__item yes-select" @click="changeTypeShow(true)">
+              <span class="sp">Выберите вид ремонта:</span>
+              <div class="visit-form__repair-type">{{ repairType }}</div>
+            </div>
+            <div class="visit-form__item yes-select" @click="changeDistrictShow(true)">
+              <span class="sp">В каком районе Москвы Вы находитесь:</span>
+              <div class="visit-form__district">{{ district }}</div>
+            </div>
+            <div class="visit-form__item" @click="changeCalendarShow(true)">
+              <span class="sp">Когда к Вам приехать</span>
+              <div class="visit-form__date">{{ renderDate }}
+                <div class="calendar-picker" :style="calendarStyle" @click.stop>
+                  <v-date-picker v-model="date" @dayclick="changeCalendarShow(false)" />
+                </div>
+              </div>
+            </div>
+            <div class="visit-form__item">
+              <div class="visit-form__phone">
+                <input type="tel" placeholder="Ваш телефон" v-model="phone">
+              </div>
+            </div>
+            <div class="visit-form__submit">Вызвать мастера</div>
+
+            <div class="choose-district choose-value" 
+                  :style="districtStyle"
+                  @click="changeDistrictShow(false)">
+              <div class="choose-value__container">
+                <div class="choose-value__item"
+                      v-for="(value, index) in districts"
+                      @click="setDistrict(index)"
+                >
+                {{ value }}
+                </div>
+              </div>
+            </div>
+            <div class="choose-type choose-value" 
+                  :style="typeStyle"
+                  @click="changeTypeShow(false)">
+              <div class="choose-value__container">
+                <div class="choose-value__item"
+                      v-for="(value, index) in repairTypes"
+                      @click="setType(index)"
+                >
+                {{ value }}
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="interval" style="height: 50px;"></div>
+    <h2 style="text-align: center;">Выполненные работы</h2>
+    <div class="interval" style="height: 50px;"></div>
+    <div class="finished-works">
+      <div class="wrapper">
+        <div class="finished__container">
+          <div class="finished__item" style="background-image: url(./assets/img/service-price.png);">
+            <div class="finished__title">Замена стеклопакета</div>
+            <div class="finished__info">
+              <div><img src="./assets/img/finished-cost.png" alt="img">1350 р</div>
+              <div><img src="./assets/img/finished-time.png" alt="img">20 мин</div>
+              <div><img src="./assets/img/finished-garanty.png" alt="img">2 года</div>
+            </div>
+          </div>
+          <div class="finished__item" style="background-image: url(./assets/img/service-price.png);">
+            <div class="finished__title">Замена стеклопакета</div>
+            <div class="finished__info">
+              <div><img src="./assets/img/finished-cost.png" alt="img">1350 р</div>
+              <div><img src="./assets/img/finished-time.png" alt="img">20 мин</div>
+              <div><img src="./assets/img/finished-garanty.png" alt="img">2 года</div>
+            </div>
+          </div>
+          <div class="finished__item" style="background-image: url(./assets/img/service-price.png);">
+            <div class="finished__title">Замена стеклопакета</div>
+            <div class="finished__info">
+              <div><img src="./assets/img/finished-cost.png" alt="img">1350 р</div>
+              <div><img src="./assets/img/finished-time.png" alt="img">20 мин</div>
+              <div><img src="./assets/img/finished-garanty.png" alt="img">2 года</div>
+            </div>
+          </div>
+          <div class="finished__item" style="background-image: url(./assets/img/service-price.png);">
+            <div class="finished__title">Замена стеклопакета</div>
+            <div class="finished__info">
+              <div><img src="./assets/img/finished-cost.png" alt="img">1350 р</div>
+              <div><img src="./assets/img/finished-time.png" alt="img">20 мин</div>
+              <div><img src="./assets/img/finished-garanty.png" alt="img">2 года</div>
+            </div>
+          </div>
+          <div class="finished__item" style="background-image: url(./assets/img/service-price.png);">
+            <div class="finished__title">Замена стеклопакета</div>
+            <div class="finished__info">
+              <div><img src="./assets/img/finished-cost.png" alt="img">1350 р</div>
+              <div><img src="./assets/img/finished-time.png" alt="img">20 мин</div>
+              <div><img src="./assets/img/finished-garanty.png" alt="img">2 года</div>
+            </div>
+          </div>
+          <div class="finished__item" style="background-image: url(./assets/img/service-price.png);">
+            <div class="finished__title">Замена стеклопакета</div>
+            <div class="finished__info">
+              <div><img src="./assets/img/finished-cost.png" alt="img">1350 р</div>
+              <div><img src="./assets/img/finished-time.png" alt="img">20 мин</div>
+              <div><img src="./assets/img/finished-garanty.png" alt="img">2 года</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+    </footer>
+  </body>
+</html>
