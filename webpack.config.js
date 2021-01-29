@@ -74,7 +74,6 @@ module.exports = {
         new webpack.SourceMapDevToolPlugin({
             filename: '[file].map'
         }),
-        new webpack.HotModuleReplacementPlugin()
     ],
     module: {
         rules: [

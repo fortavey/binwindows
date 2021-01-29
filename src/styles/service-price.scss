@@ -6,6 +6,9 @@
     @media screen and (min-width: 650px) {
       justify-content: space-around;
     }
+    @media screen and (min-width: 1000px) {
+      justify-content: space-between;
+    }
   }
   &__item {
     max-width: 278px;
@@ -21,6 +24,7 @@
   &__title {
     font-size: 18px;
     line-height: 21.94px;
+    padding: 9px 0 18px;
   }
   &__price {
     display: inline-flex;

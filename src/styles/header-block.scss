@@ -2,6 +2,9 @@
     &-info {
       display: flex;
       align-items: center;
+      .social__item {
+        margin-bottom: 7px;
+      }
     }
 }
 .top-line {
@@ -9,6 +12,9 @@
   @media screen and (max-width: 900px) {
     padding-bottom: 10px;
     border-bottom: 1px solid #ededed;
+  }
+  @media screen and (min-width: 900px) {
+    padding: 15px 0;
   }
   &__container {
     display: flex;
@@ -44,10 +50,10 @@
   &__item {
     display: flex;
     align-items: center;
+    margin-bottom: 14px;
   }
   &__image {
     margin-right: 10px;
-    margin-bottom: 14px;
   }
   &__title {
     font-size: 12px;
@@ -61,8 +67,10 @@
   }
   .top-line &__image {
     width: 23px;
-    margin-bottom: 6px;
     margin-left: 22px;
+  }
+  .top-line &__item {
+    margin-bottom: 6px;
   }
 }
 
@@ -74,20 +82,22 @@
     justify-content: center;
     font-weight: bold;
     font-size: 12px;
+    img {
+      width: 20px;
+      margin-right: 10px;
+    }
     @media screen and (min-width: 500px) {
       font-size: 15px;
     }
     @media screen and (min-width: 900px) {
       font-size: 15px;
       font-size: 24px;
+      justify-content: flex-end;
       img {
         width: 37px;
       }
     }
-    img {
-      width: 20px;
-      margin-right: 10px;
-    }
+    
   }
   .work-time {
     font-size: 12px;
@@ -211,6 +221,7 @@
     left: 0;
     height: 100vh;
     overflow-y: scroll;
+    z-index: 100;
   }
   .top-line {
     padding-bottom: 10px;

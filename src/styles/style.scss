@@ -9,6 +9,10 @@
 @import 'specialists.scss';
 @import 'stages.scss';
 @import 'finished-works.scss';
+@import 'reviews.scss';
+@import 'articles.scss';
+@import 'questions.scss';
+@import 'footer.scss';
 
 * {
     box-sizing: border-box;
@@ -47,5 +51,19 @@ h3 {
   border-radius: 6px;
   &:hover {
     box-shadow: inset 0px 0px 25px #2D5F5D;
+  }
+}
+.global-read-more {
+  text-align: center;
+  a {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    color: #265077;
+  }
+}
+.interval {
+  @media screen and (max-width: 500px) {
+    max-height: 30px !important;
   }
 }

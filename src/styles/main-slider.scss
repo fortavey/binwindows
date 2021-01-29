@@ -20,7 +20,7 @@
     padding: 20px 0;
     font-size: 25px;
     @media screen and (min-width: 1000px) {
-      padding: 100px 0 39px;
+      padding: 106px 0 39px 2px;
       font-size: 48px;
     }
   }
@@ -28,6 +28,10 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    @media screen and (min-width: 1000px) {
+      padding-left: 8px;
+      padding-top: 8px;
+    }
   }
   &__li {
     display: flex;
@@ -37,7 +41,7 @@
     line-height: 14px;
     @media screen and (min-width: 1000px) {
       font-size: 18px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
     &::before {
       content: '';
@@ -75,6 +79,7 @@
     }
     @media screen and (min-width: 1000px) {
       margin-left: -150px;
+      margin-bottom: 78px;
     }
     &-button {
       width: 50px;
@@ -139,6 +144,10 @@
 }
 .call-master {
   padding-top: 20px;
+  @media screen and (min-width: 1000px) {
+    padding-top: 33px;
+    padding-left: 7px;
+  }
   form {
     @media screen and (min-width: 500px) {
       display: flex;

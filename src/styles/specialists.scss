@@ -22,6 +22,9 @@
       flex-direction: column;
       justify-content: space-between;
       padding: 30px;
+      @media screen and (min-width: 900px) {
+        padding: 50px 50px 60px;
+      }
     }
 }
 .small-specialist {
@@ -39,6 +42,8 @@
     font-size: 18px;
     font-weight: 500;
     color: #022140;
+    margin-top: 28px;
+    margin-bottom: 16px;
   }
   &__position {
     color: #2D5F5D;
@@ -74,10 +79,16 @@
       width: 352px;
       height: 352px;
       border-radius: 180px;
+      align-self: flex-start;
+      margin-top: 0;
     }
   }
   &__info {
     width: 100%;
+    @media screen and (min-width: 900px) {
+      padding-top: 38px;
+      padding-left: 5px;
+    }
   }
   &__name {
     font-size: 20px;
@@ -91,6 +102,9 @@
       line-height: 29.26px;
       text-align: left;
     }
+    @media screen and (min-width: 900px){
+      margin-bottom: 14px;
+    }
   }
   &__position {
     margin-bottom: 20px;
@@ -101,12 +115,18 @@
       line-height: 25px;
       text-align: left;
     }
+    @media screen and (min-width: 900px){
+      margin-bottom: 49px;
+    }
   }
   &__experience {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
   &__education {
     margin-bottom: 10px;
+    @media screen and (min-width: 900px){
+      margin-bottom: 52px;
+    }
   }
   &__desc {
     margin-bottom: 30px;
@@ -120,6 +140,9 @@
   justify-content: space-between;
   @media screen and (min-width: 700px){
     margin-top: 30px;
+  }
+  @media screen and (min-width: 900px){
+    margin-top: 63px;
   }
   &__arrow {
     display: none;
@@ -137,7 +160,7 @@
   &__user {
     text-align: center;
     font-size: 13px;
-    font-weight: bold;
+    cursor: pointer;
     &--prev {
     }
     &--next {
@@ -146,8 +169,16 @@
   img {
   }
   .slider-manage__user-name {
+    font-weight: bold;
+    @media screen and (min-width: 1000px) {
+      font-size: 18px;
+    }
   }
   .slider-manage__user-position {
+    @media screen and (min-width: 1000px) {
+      font-size: 14px;
+      padding-top: 9px;
+    }
   }
 }
 .vertical-arrow {
@@ -160,13 +191,13 @@
   left: calc(50% - 6px);
   cursor: pointer;
   &--top {
-    top: -20px;
+    top: -26px;
     transform: rotate(-45deg);
   }
 }
 .vertical-arrow {
   &--bottom {
     transform: rotate(135deg);
-    bottom: -20px;
+    bottom: -50px;
   }
 } 

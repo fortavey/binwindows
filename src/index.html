@@ -124,9 +124,9 @@
         </div>
       </div>
     </div>
-    <div class="interval" style="height: 50px;"></div>
+    <div class="interval" style="height: 48px;"></div>
     <h2 style="text-align: center;">Услуги</h2>
-    <div class="interval" style="height: 50px;"></div>
+    <div class="interval" style="height: 38px;"></div>
     <div class="services">
       <div class="wrapper">
         <div class="service">
@@ -240,6 +240,7 @@
         </div>
       </div>
     </div>
+    <div class="interval" style="height: 74px;"></div>
     <div class="percent-form">
       <div class="wrapper">
         <div class="percent-form__container">
@@ -262,9 +263,9 @@
         </div>
       </div>
     </div>
-    <div class="interval" style="height: 50px;"></div>
+    <div class="interval" style="height: 111px;"></div>
     <h2 style="text-align: center;">Цены на услуги</h2>
-    <div class="interval" style="height: 50px;"></div>
+    <div class="interval" style="height: 60px;"></div>
     <div class="service-price">
       <div class="wrapper">
         <div class="service-price__container">
@@ -302,9 +303,9 @@
         <div class="service-price__more"><a href="">Смотреть все цены</a></div>
       </div>
     </div>
-    <div class="interval" style="height: 50px;"></div>
+    <div class="interval" style="height: 104px;"></div>
     <h2 style="text-align: center;">Наши преимущества</h2>
-    <div class="interval" style="height: 50px;"></div>
+    <div class="interval" style="height: 47px;"></div>
     <div class="advantages">
       <div class="wrapper">
         <div class="advantages__container">
@@ -351,9 +352,9 @@
         </div>
       </div>
     </div>
-    <div class="interval" style="height: 50px;"></div>
+    <div class="interval" style="height: 66px;"></div>
     <h2 style="text-align: center;">Наши специалисты</h2>
-    <div class="interval" style="height: 50px;"></div>
+    <div class="interval" style="height: 64px;"></div>
     <div class="specialists">
       <div class="wrapper">
         <div class="specialists__container">
@@ -408,9 +409,9 @@
         </div>
       </div>
     </div>
-    <div class="interval" style="height: 50px;"></div>
+    <div class="interval" style="height: 179px;"></div>
     <h2 style="text-align: center;">Этапы работы</h2>
-    <div class="interval" style="height: 50px;"></div>
+    <div class="interval" style="height: 41px;"></div>
     <div class="stages">
       <div class="wrapper">
         <div class="stages__container">
@@ -445,68 +446,13 @@
             </div>
           </div>
           <img src="./assets/img/stages.png" alt="img" class="stages__img">
-          <div class="visit-form">
-            <div class="visit-form__title">
-              Вызвать мастера <strong>БЕСПЛАТНО</strong> <br>
-              по тел: +7 (495) 000-00-00 <br>
-              или <br>
-              <strong>заполните форму</strong>
-            </div>
-            <div class="visit-form__item yes-select" @click="changeTypeShow(true)">
-              <span class="sp">Выберите вид ремонта:</span>
-              <div class="visit-form__repair-type">{{ repairType }}</div>
-            </div>
-            <div class="visit-form__item yes-select" @click="changeDistrictShow(true)">
-              <span class="sp">В каком районе Москвы Вы находитесь:</span>
-              <div class="visit-form__district">{{ district }}</div>
-            </div>
-            <div class="visit-form__item" @click="changeCalendarShow(true)">
-              <span class="sp">Когда к Вам приехать</span>
-              <div class="visit-form__date">{{ renderDate }}
-                <div class="calendar-picker" :style="calendarStyle" @click.stop>
-                  <v-date-picker v-model="date" @dayclick="changeCalendarShow(false)" />
-                </div>
-              </div>
-            </div>
-            <div class="visit-form__item">
-              <div class="visit-form__phone">
-                <input type="tel" placeholder="Ваш телефон" v-model="phone">
-              </div>
-            </div>
-            <div class="visit-form__submit">Вызвать мастера</div>
-
-            <div class="choose-district choose-value" 
-                  :style="districtStyle"
-                  @click="changeDistrictShow(false)">
-              <div class="choose-value__container">
-                <div class="choose-value__item"
-                      v-for="(value, index) in districts"
-                      @click="setDistrict(index)"
-                >
-                {{ value }}
-                </div>
-              </div>
-            </div>
-            <div class="choose-type choose-value" 
-                  :style="typeStyle"
-                  @click="changeTypeShow(false)">
-              <div class="choose-value__container">
-                <div class="choose-value__item"
-                      v-for="(value, index) in repairTypes"
-                      @click="setType(index)"
-                >
-                {{ value }}
-                </div>
-              </div>
-            </div>
-
-          </div>
+          <div class="visit-form"></div>
         </div>
       </div>
     </div>
-    <div class="interval" style="height: 50px;"></div>
+    <div class="interval" style="height: 121px;"></div>
     <h2 style="text-align: center;">Выполненные работы</h2>
-    <div class="interval" style="height: 50px;"></div>
+    <div class="interval" style="height: 61px;"></div>
     <div class="finished-works">
       <div class="wrapper">
         <div class="finished__container">
@@ -561,7 +507,229 @@
         </div>
       </div>
     </div>
+    <div class="interval" style="height: 110px;"></div>
+    <h2 style="text-align: center;">Отзывы наших клиентов</h2>
+    <div class="interval" style="height: 59px;"></div>
+    <div class="reviews">
+      <div class="wrapper">
+        <div class="reviews__container">
+          <div class="review">
+            <div class="review__title">Павел Дмитриевич, дог.№ 5584</div>
+            <div class="review__info"><span class="review__city">г. Москва</span><span class="review__date">15.09.2019</span></div>
+            <div class="review__text">
+              Благодаря вам узнал, что бывают сетки от пыли и пыльцы. Спасибо! Поставили конструкции с
+              полотном «Антипыльца», так как под окном целый палисадник. Вот теперь оцениваем
+              эффективность.
+            </div>
+            <div class="review__bottom">
+              <div class="review__more"><a href="">Читать оригинал</a></div>
+              <div class="review__stars">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="review__title">Павел Дмитриевич, дог.№ 5584</div>
+            <div class="review__info"><span class="review__city">г. Москва</span><span class="review__date">15.09.2019</span></div>
+            <div class="review__text">
+              Благодаря вам узнал, что бывают сетки от пыли и пыльцы. Спасибо! Поставили конструкции с
+              полотном «Антипыльца», так как под окном целый палисадник. Вот теперь оцениваем
+              эффективность.
+            </div>
+            <div class="review__bottom">
+              <div class="review__more"><a href="">Читать оригинал</a></div>
+              <div class="review__stars">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="review__title">Павел Дмитриевич, дог.№ 5584</div>
+            <div class="review__info"><span class="review__city">г. Москва</span><span class="review__date">15.09.2019</span></div>
+            <div class="review__text">
+              Благодаря вам узнал, что бывают сетки от пыли и пыльцы. Спасибо! Поставили конструкции с
+              полотном «Антипыльца», так как под окном целый палисадник. Вот теперь оцениваем
+              эффективность.
+            </div>
+            <div class="review__bottom">
+              <div class="review__more"><a href="">Читать оригинал</a></div>
+              <div class="review__stars">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="global-read-more"><a href="">Все отзывы</a></div>
+      </div>
+    </div>
+    <div class="interval" style="height: 121px;"></div>
+    <h2 style="text-align: center;">Наши статьи</h2>
+    <div class="interval" style="height: 31px;"></div>
+    <div class="articles">
+      <div class="wrapper">
+        <div class="articles__container">
+          <div class="articles__last articles__column">
+            <h3>Последние публикации</h3>
+            <div class="articles__item">
+              <img src="./assets/img/service-price.png" alt="img" class="articles__img">
+              <div>
+                <div class="articles__title">Ламинация пластикового профиля</div>
+                <div class="articles__excerpt">
+                  Пластиковые окна существенно упростили нашу жизнь. Мы забыли о необходимости регулярно подкрашивать, ремонтировать рамы,
+                </div>
+                <div class="articles__more"><a href="">Читать далее</a></div>
+              </div>
+            </div>
+            <div class="articles__item">
+              <img src="./assets/img/service-price.png" alt="img" class="articles__img">
+              <div>
+                <div class="articles__title">Ламинация пластикового профиля</div>
+                <div class="articles__excerpt">
+                  Пластиковые окна существенно упростили нашу жизнь. Мы забыли о необходимости регулярно подкрашивать, ремонтировать рамы,
+                </div>
+                <div class="articles__more"><a href="">Читать далее</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="articles__interest articles__column">
+            <h3>Интересные статьи</h3>
+            <div class="articles__item">
+              <img src="./assets/img/service-price.png" alt="img" class="articles__img">
+              <div>
+                <div class="articles__title">Ламинация пластикового профиля</div>
+                <div class="articles__excerpt">
+                  Пластиковые окна существенно упростили нашу жизнь. Мы забыли о необходимости регулярно подкрашивать, ремонтировать рамы,
+                </div>
+                <div class="articles__more"><a href="">Читать далее</a></div>
+              </div>
+            </div>
+            <div class="articles__item">
+              <img src="./assets/img/service-price.png" alt="img" class="articles__img">
+              <div>
+                <div class="articles__title">Ламинация пластикового профиля</div>
+                <div class="articles__excerpt">
+                  Пластиковые окна существенно упростили нашу жизнь. Мы забыли о необходимости регулярно подкрашивать, ремонтировать рамы,
+                </div>
+                <div class="articles__more"><a href="">Читать далее</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="global-read-more"><a href="">Больше статей</a></div>
+      </div>
+    </div>
+    <div class="interval" style="height: 46px;"></div>
+    <div class="questions" style="background-image: url(./assets/img/questions-bg.png);">
+      <div class="wrapper">
+        <div class="questions__container">
+          <div class="questions__block">
+            <div class="questions__title">Вопросы мастеру</div>
+            <div class="questions__item">
+              <div class="questions__author">Вопрос от Константина, 15 января 2019</div>
+              <div class="questions__question">
+                Можно ли не ставить поперечную перекладину на москитную сетку? Мне не нравится “перечёркнутое” окно.
+              </div>
+              <div class="questions__ansver-title">Ответ Мастера Александра, (опыт работы: 15 лет) 15 января 2019</div>
+              <div class="questions__ansver">
+                Поперечная горизонтальная перекладина - импост, обязательно ставится на сетки, размер которых превышает 1м. Импост (распаковка) необходим для повышения надёжности констркции и препятствует её деформации
+              </div>
+              <div class="questions__more"><a href="">Читать полностью</a></div>
+            </div>
+            <div class="questions__item">
+              <div class="questions__author">Вопрос от Константина, 15 января 2019</div>
+              <div class="questions__question">
+                Можно ли не ставить поперечную перекладину на москитную сетку? Мне не нравится “перечёркнутое” окно.
+              </div>
+              <div class="questions__ansver-title">Ответ Мастера Александра, (опыт работы: 15 лет) 15 января 2019</div>
+              <div class="questions__ansver">
+                Поперечная горизонтальная перекладина - импост, обязательно ставится на сетки, размер которых превышает 1м. Импост (распаковка) необходим для повышения надёжности констркции и препятствует её деформации
+              </div>
+              <div class="questions__more"><a href="">Читать полностью</a></div>
+            </div>
+
+          </div>
+          <div class="questions__form">
+            <div class="questions__see-more">Смотреть все вопросы</div>
+            <div class="questions__add-question">Задать вопрос мастеру</div>
+          </div>
+          <div class="questions__image"><img src="./assets/img/questions.png" alt="img"></div>
+        </div>
+      </div>
+    </div>
+    <div class="interval" style="height: 136px;"></div>
+    <h2 style="text-align: center;">Работаем по всей Москве и Московской области</h2>
+    <div class="interval" style="height: 62px;"></div>
+    <img src="./assets/img/map.png" alt="map" style="min-height: 300px;object-fit: cover;">
     <footer class="site-footer">
+      <div class="footer-line"></div>
+      <div class="wrapper">
+        <div class="footer-logo">
+          <div class="logo">
+            <img class="logo__image" src="./assets/img/logo.png" alt="logo">
+          </div>
+        </div>
+        <div style="flex-grow: 1;">
+          <nav>
+            <ul>     
+              <li class="menu-item-has-children">
+                <a href="">Услуги</a>
+                <ul class="sub-menu">
+                  <li><a href="">Ремонт пластиковых окон</a></li>
+                  <li><a href="">Ремонт деревянных окон</a></li>
+                  <li><a href="">Ремонт аллюминиевых окон</a></li>
+                  <li><a href="">Москитные сетки</a></li>
+                  <li><a href="">Аксессуары</a></li>
+                  <li><a href="">Замена стеклопакетов</a></li>
+                  <li><a href="">Жалюзи</a></li>
+                </ul>
+              </li>
+              <li><a href="">О компании</a></li>
+              <li><a href="">Цены</a></li>
+              <li><a href="">Акции</a></li>
+              <li><a href="">Калькулятор</a></li>
+              <li><a href="">Работы и отзывы</a></li>
+              <li><a href="">Блог</a></li>
+              <li><a href="">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="footer-container">
+            <div class="footer-address">
+              <div>Адрес: Москва, Лужнецкая набережная д 2/3стр. 23Б <a href="">Показать на карте</a></div>
+              <div>Тел: +7 (495) 000-00-00 </div>
+            </div>
+            <div class="footer-social">
+              <div class="social">
+                <div class="social__item">
+                  <img class="social__image" src="./assets/img/skype.svg" alt="skype">
+                  <div class="social__title">Skype</div>
+                </div>
+                <div class="social__item">
+                  <img class="social__image" src="./assets/img/whatsapp.svg" alt="skype">
+                  <div class="social__title">WhatsApp</div>
+                </div>
+                <div class="social__item">
+                  <img class="social__image" src="./assets/img/email.svg" alt="skype">
+                  <div class="social__title">Email</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy">Все права защищены, 2021</div>
+      <div class="footer-line"></div>
     </footer>
   </body>
 </html>

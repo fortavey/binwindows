@@ -8,10 +8,10 @@
     max-width: 400px;
     box-shadow: -4px -4px 25px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    padding-top: 22px;
+    padding-top: 16px;
     background-repeat: no-repeat;
     background-position: center center;
-    padding-bottom: 77px;
+    padding-bottom: 25px;
   }
   &__image {
     display: none;
@@ -22,15 +22,16 @@
   }
   &__title {
     font-size: 24px;
-    line-height: 29.26px;
+    line-height: 39.26px;
     text-align: center;
     color: #fff;
+    margin-bottom: 53px;
     strong {
       display: block;
       text-align: center;
       font-size: 48px;
       font-weight: bold;
-      margin: 10px 0;
+      margin: 21px 0 9px;
     }
     span {
       font-weight: bold;
