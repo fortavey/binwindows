@@ -1,3 +1,6 @@
+try{
+if(document.querySelectorAll('.specialists').length) {
+
 const sliderVue = new Vue({
   el: '.specialists',
   data: {
@@ -67,3 +70,6 @@ const sliderVue = new Vue({
     }
   }
 });
+
+}
+}catch(err){console.log(err);}

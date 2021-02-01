@@ -1,3 +1,6 @@
+try{
+if(document.querySelectorAll('.visit-form').length) {
+
 const visitFormVue = new Vue({
   el: '.visit-form',
   template: `
@@ -138,3 +141,6 @@ const visitFormVue = new Vue({
     this.repairType = this.repairTypes[0];
   }
 });
+
+}
+}catch(err){console.log(err);}

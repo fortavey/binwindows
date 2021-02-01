@@ -55,9 +55,16 @@ module.exports = {
     },
     optimization: optimization(),
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './index.html'
-        }),
+        new HtmlWebpackPlugin({ filename: 'index.html', template: './index.html' }),
+        new HtmlWebpackPlugin({ filename: 'services.html', template: './pages/services.html' }),
+        new HtmlWebpackPlugin({ filename: 'service.html', template: './pages/service.html' }),
+        new HtmlWebpackPlugin({ filename: 'about.html', template: './pages/about.html' }),
+        new HtmlWebpackPlugin({ filename: 'blog.html', template: './pages/blog.html' }),
+        new HtmlWebpackPlugin({ filename: 'calc.html', template: './pages/calc.html' }),
+        new HtmlWebpackPlugin({ filename: 'contacts.html', template: './pages/contacts.html' }),
+        new HtmlWebpackPlugin({ filename: 'price.html', template: './pages/price.html' }),
+        new HtmlWebpackPlugin({ filename: 'sales.html', template: './pages/sales.html' }),
+        new HtmlWebpackPlugin({ filename: 'works.html', template: './pages/works.html' }),
         new CleanWebpackPlugin(),
         new CopyPlugin({
             patterns:[

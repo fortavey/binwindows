@@ -1,0 +1,41 @@
+.services-in-page {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__item {
+    width: 100%;
+    margin-bottom: 20px;
+    @media screen and (min-width: 700px) {
+      width: calc(100% / 12 * 6 - 20px);
+      margin: 0 10px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    @media screen and (min-width: 1100px) {
+      width: calc(100% / 12 * 4 - 20px);
+      margin-bottom: 58px;
+    }
+  }
+  &__title {
+    height: 69px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 1100px) {
+      margin-top: 26px;
+    }
+  }
+  &__image {
+    img {
+      display: block;
+      margin: auto;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #2d3439;
+  }
+}

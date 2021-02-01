@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Webpack App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></head>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+    <!-- <script src='https://unpkg.com/v-calendar'></script> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <body class="not-main">
+    <header class="site-header">
+      <div class="top-line">
+        <div class="wrapper top-line__container">
+          <div class="logo">
+            <a href="/"><img class="logo__image" src="./assets/img/logo.png" alt="logo"></a>
+          </div>
+          <div class="site-header-info">
+            <span class="use-msgs">Задайте вопрос на прямую в:</span>
+            <div class="social">
+              <div class="social__item">
+                <img class="social__image" src="./assets/img/skype.svg" alt="skype">
+                <div class="social__title">Skype</div>
+              </div>
+              <div class="social__item">
+                <img class="social__image" src="./assets/img/whatsapp.svg" alt="skype">
+                <div class="social__title">WhatsApp</div>
+              </div>
+              <div class="social__item">
+                <img class="social__image" src="./assets/img/email.svg" alt="skype">
+                <div class="social__title">Email</div>
+              </div>
+            </div>
+            <div class="top-info">
+              <div class="phone"><img src="./assets/img/phone.svg" alt="icon">+7 459 445 15 51</div>
+              <div class="work-time">Прием заявок с <strong>7:00</strong> до <strong>23:00</strong> без выходных</div>
+            </div>
+          </div>
+          <div class="menu-button">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-line">
+        <div class="wrapper">
+          <nav>
+            <ul>     
+              <li class="menu-item-has-children">
+                <a href="services.html">Услуги</a>
+                <ul class="sub-menu">
+                  <li><a href="service.html">Ремонт пластиковых окон</a></li>
+                  <li><a href="service.html">Ремонт деревянных окон</a></li>
+                  <li><a href="service.html">Ремонт аллюминиевых окон</a></li>
+                  <li><a href="service.html">Москитные сетки</a></li>
+                  <li><a href="service.html">Аксессуары</a></li>
+                  <li><a href="service.html">Замена стеклопакетов</a></li>
+                  <li><a href="service.html">Жалюзи</a></li>
+                </ul>
+              </li>
+              <li><a href="about.html">О компании</a></li>
+              <li><a href="price.html">Цены</a></li>
+              <li><a href="sales.html">Акции</a></li>
+              <li><a href="calc.html">Калькулятор</a></li>
+              <li><a href="works.html">Работы и отзывы</a></li>
+              <li><a href="blog.html">Блог</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <p id="breadcrumbs">
+        <span>
+          <span>
+            <a href="/">Главная</a> / 
+            <span>
+              <a href="services.html">Наши услуги</a> /
+              <span class="breadcrumb_last" aria-current="page">Ремонт пластиковых окон</span>
+            </span>
+          </span>
+        </span>
+      </p>        
+    </div>
+    <div class="interval" style="height: 48px;"></div>
+    <div class="flex-title">
+      <div class="wrapper">
+        <div class="flex-title__container">
+          <div class="flex-title__text">
+            <h1>Ремонт пластиковых окон</h1>
+            <p>
+              Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker
+            </p>
+          </div>
+          <div class="flex-title__image">
+            <img src="../assets/img/service1.png" alt="img" class="flex-title__img">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="interval" style="height: 48px;"></div>
+    <h2 style="text-align: center;">Сколько стоит ремонт пластикового окна?</h2>
+    <div class="interval" style="height: 48px;"></div>
+    <p>
+      Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker
+    </p>
+    <div class="interval" style="height: 48px;"></div>
+    <h2 style="text-align: center;">Выполняемые работы:</h2>
+    <div class="interval" style="height: 48px;"></div>
+    <div class="service-works">
+      <div class="wrapper">
+        <div class="service-works__item closed">
+          <div class="service-works__title shadow-btn">
+            <div class="operator"><span></span><span></span></div>
+            Регулировка
+          </div>
+          <div class="service-works__desc">
+            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker
+          </div>
+        </div>
+        <div class="service-works__item closed">
+          <div class="service-works__title shadow-btn">
+            <div class="operator"><span></span><span></span></div>
+            Замена уплотнителя
+          </div>
+          <div class="service-works__desc">
+            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker
+          </div>
+        </div>
+        <div class="service-works__item closed">
+          <div class="service-works__title shadow-btn">
+            <div class="operator"><span></span><span></span></div>
+            Устранение запотевания
+          </div>
+          <div class="service-works__desc">
+            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker
+          </div>
+        </div>
+        <div class="service-works__item closed">
+          <div class="service-works__title shadow-btn">
+            <div class="operator"><span></span><span></span></div>
+            Устранение продувания
+          </div>
+          <div class="service-works__desc">
+            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker
+          </div>
+        </div>
+        <div class="service-works__item closed">
+          <div class="service-works__title shadow-btn">
+            <div class="operator"><span></span><span></span></div>
+            Замена оконных створок
+          </div>
+          <div class="service-works__desc">
+            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker
+          </div>
+        </div>
+        <div class="service-works__item closed">
+          <div class="service-works__title shadow-btn">
+            <div class="operator"><span></span><span></span></div>
+            Замена битого стеклопакета
+          </div>
+          <div class="service-works__desc">
+            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker
+          </div>
+        </div>
+        <div class="service-works__item closed">
+          <div class="service-works__title shadow-btn">
+            <div class="operator"><span></span><span></span></div>
+            Герметизация и шумоизоляция
+          </div>
+          <div class="service-works__desc">
+            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker
+          </div>
+        </div>
+        <div class="service-works__item closed">
+          <div class="service-works__title shadow-btn">
+            <div class="operator"><span></span><span></span></div>
+            Утепление
+          </div>
+          <div class="service-works__desc">
+            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker
+          </div>
+        </div>
+        <div class="service-works__item closed">
+          <div class="service-works__title shadow-btn">
+            <div class="operator"><span></span><span></span></div>
+            Замена фурнитуры
+          </div>
+          <div class="service-works__desc">
+            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="interval" style="height: 48px;"></div>
+    <h2 style="text-align: center;">Другие услуги</h2>
+    <div class="interval" style="height: 48px;"></div>
+    <div class="services-in-page">
+      <div class="wrapper">
+        <div class="services-in-page__container">
+          <div class="services-in-page__item">
+            <a href="service.html"><div class="services-in-page__image"><img src="../assets/img/service4.png" alt="img"></div></a>
+            <a href="service.html"><div class="services-in-page__title shadow-btn">Москитные сетки</div></a>
+          </div>
+          <div class="services-in-page__item">
+            <a href="service.html"><div class="services-in-page__image"><img src="../assets/img/service5.png" alt="img"></div></a>
+            <a href="service.html"><div class="services-in-page__title shadow-btn">Аксессуары</div></a>
+          </div>
+          <div class="services-in-page__item">
+            <a href="service.html"><div class="services-in-page__image"><img src="../assets/img/service6.png" alt="img"></div></a>
+            <a href="service.html"><div class="services-in-page__title shadow-btn">Замена стеклопакетов</div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="interval" style="height: 121px;"></div>
+    <h2 style="text-align: center;">Выполненные работы</h2>
+    <div class="interval" style="height: 61px;"></div>
+    <div class="finished-works">
+      <div class="wrapper">
+        <div class="finished__container">
+          <div class="finished__item" style="background-image: url(./assets/img/service-price.png);">
+            <div class="finished__title">Замена стеклопакета</div>
+            <div class="finished__info">
+              <div><img src="./assets/img/finished-cost.png" alt="img">1350 р</div>
+              <div><img src="./assets/img/finished-time.png" alt="img">20 мин</div>
+              <div><img src="./assets/img/finished-garanty.png" alt="img">2 года</div>
+            </div>
+          </div>
+          <div class="finished__item" style="background-image: url(./assets/img/service-price.png);">
+            <div class="finished__title">Замена стеклопакета</div>
+            <div class="finished__info">
+              <div><img src="./assets/img/finished-cost.png" alt="img">1350 р</div>
+              <div><img src="./assets/img/finished-time.png" alt="img">20 мин</div>
+              <div><img src="./assets/img/finished-garanty.png" alt="img">2 года</div>
+            </div>
+          </div>
+          <div class="finished__item" style="background-image: url(./assets/img/service-price.png);">
+            <div class="finished__title">Замена стеклопакета</div>
+            <div class="finished__info">
+              <div><img src="./assets/img/finished-cost.png" alt="img">1350 р</div>
+              <div><img src="./assets/img/finished-time.png" alt="img">20 мин</div>
+              <div><img src="./assets/img/finished-garanty.png" alt="img">2 года</div>
+            </div>
+          </div>
+          <div class="finished__item" style="background-image: url(./assets/img/service-price.png);">
+            <div class="finished__title">Замена стеклопакета</div>
+            <div class="finished__info">
+              <div><img src="./assets/img/finished-cost.png" alt="img">1350 р</div>
+              <div><img src="./assets/img/finished-time.png" alt="img">20 мин</div>
+              <div><img src="./assets/img/finished-garanty.png" alt="img">2 года</div>
+            </div>
+          </div>
+          <div class="finished__item" style="background-image: url(./assets/img/service-price.png);">
+            <div class="finished__title">Замена стеклопакета</div>
+            <div class="finished__info">
+              <div><img src="./assets/img/finished-cost.png" alt="img">1350 р</div>
+              <div><img src="./assets/img/finished-time.png" alt="img">20 мин</div>
+              <div><img src="./assets/img/finished-garanty.png" alt="img">2 года</div>
+            </div>
+          </div>
+          <div class="finished__item" style="background-image: url(./assets/img/service-price.png);">
+            <div class="finished__title">Замена стеклопакета</div>
+            <div class="finished__info">
+              <div><img src="./assets/img/finished-cost.png" alt="img">1350 р</div>
+              <div><img src="./assets/img/finished-time.png" alt="img">20 мин</div>
+              <div><img src="./assets/img/finished-garanty.png" alt="img">2 года</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="interval" style="height: 46px;"></div>
+    <div class="questions" style="background-image: url(./assets/img/questions-bg.png);">
+      <div class="wrapper">
+        <div class="questions__container">
+          <div class="questions__block">
+            <div class="questions__title">Вопросы мастеру</div>
+            <div class="questions__item">
+              <div class="questions__author">Вопрос от Константина, 15 января 2019</div>
+              <div class="questions__question">
+                Можно ли не ставить поперечную перекладину на москитную сетку? Мне не нравится “перечёркнутое” окно.
+              </div>
+              <div class="questions__ansver-title">Ответ Мастера Александра, (опыт работы: 15 лет) 15 января 2019</div>
+              <div class="questions__ansver">
+                Поперечная горизонтальная перекладина - импост, обязательно ставится на сетки, размер которых превышает 1м. Импост (распаковка) необходим для повышения надёжности констркции и препятствует её деформации
+              </div>
+              <div class="questions__more"><a href="">Читать полностью</a></div>
+            </div>
+            <div class="questions__item">
+              <div class="questions__author">Вопрос от Константина, 15 января 2019</div>
+              <div class="questions__question">
+                Можно ли не ставить поперечную перекладину на москитную сетку? Мне не нравится “перечёркнутое” окно.
+              </div>
+              <div class="questions__ansver-title">Ответ Мастера Александра, (опыт работы: 15 лет) 15 января 2019</div>
+              <div class="questions__ansver">
+                Поперечная горизонтальная перекладина - импост, обязательно ставится на сетки, размер которых превышает 1м. Импост (распаковка) необходим для повышения надёжности констркции и препятствует её деформации
+              </div>
+              <div class="questions__more"><a href="">Читать полностью</a></div>
+            </div>
+
+          </div>
+          <div class="questions__form">
+            <div class="questions__see-more">Смотреть все вопросы</div>
+            <div class="questions__add-question">Задать вопрос мастеру</div>
+          </div>
+          <div class="questions__image"><img src="./assets/img/questions.png" alt="img"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="interval" style="height: 110px;"></div>
+    <h2 style="text-align: center;">Отзывы наших клиентов</h2>
+    <div class="interval" style="height: 59px;"></div>
+    <div class="reviews">
+      <div class="wrapper">
+        <div class="reviews__container">
+          <div class="review">
+            <div class="review__title">Павел Дмитриевич, дог.№ 5584</div>
+            <div class="review__info"><span class="review__city">г. Москва</span><span class="review__date">15.09.2019</span></div>
+            <div class="review__text">
+              Благодаря вам узнал, что бывают сетки от пыли и пыльцы. Спасибо! Поставили конструкции с
+              полотном «Антипыльца», так как под окном целый палисадник. Вот теперь оцениваем
+              эффективность.
+            </div>
+            <div class="review__bottom">
+              <div class="review__more"><a href="">Читать оригинал</a></div>
+              <div class="review__stars">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="review__title">Павел Дмитриевич, дог.№ 5584</div>
+            <div class="review__info"><span class="review__city">г. Москва</span><span class="review__date">15.09.2019</span></div>
+            <div class="review__text">
+              Благодаря вам узнал, что бывают сетки от пыли и пыльцы. Спасибо! Поставили конструкции с
+              полотном «Антипыльца», так как под окном целый палисадник. Вот теперь оцениваем
+              эффективность.
+            </div>
+            <div class="review__bottom">
+              <div class="review__more"><a href="">Читать оригинал</a></div>
+              <div class="review__stars">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+              </div>
+            </div>
+          </div>
+          <div class="review">
+            <div class="review__title">Павел Дмитриевич, дог.№ 5584</div>
+            <div class="review__info"><span class="review__city">г. Москва</span><span class="review__date">15.09.2019</span></div>
+            <div class="review__text">
+              Благодаря вам узнал, что бывают сетки от пыли и пыльцы. Спасибо! Поставили конструкции с
+              полотном «Антипыльца», так как под окном целый палисадник. Вот теперь оцениваем
+              эффективность.
+            </div>
+            <div class="review__bottom">
+              <div class="review__more"><a href="">Читать оригинал</a></div>
+              <div class="review__stars">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+                <img src="./assets/img/star.svg" alt="star">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="global-read-more"><a href="">Все отзывы</a></div>
+      </div>
+    </div>
+
+
+    <div class="interval" style="height: 46px;"></div>
+    <footer class="site-footer">
+      <div class="footer-line"></div>
+      <div class="wrapper">
+        <div class="footer-logo">
+          <div class="logo">
+            <a href="/"><img class="logo__image" src="./assets/img/logo.png" alt="logo"></a>
+          </div>
+        </div>
+        <div style="flex-grow: 1;">
+          <nav>
+            <ul>     
+              <li class="menu-item-has-children">
+                <a href="services.html">Услуги</a>
+                <ul class="sub-menu">
+                  <li><a href="service.html">Ремонт пластиковых окон</a></li>
+                  <li><a href="service.html">Ремонт деревянных окон</a></li>
+                  <li><a href="service.html">Ремонт аллюминиевых окон</a></li>
+                  <li><a href="service.html">Москитные сетки</a></li>
+                  <li><a href="service.html">Аксессуары</a></li>
+                  <li><a href="service.html">Замена стеклопакетов</a></li>
+                  <li><a href="service.html">Жалюзи</a></li>
+                </ul>
+              </li>
+              <li><a href="about.html">О компании</a></li>
+              <li><a href="price.html">Цены</a></li>
+              <li><a href="sales.html">Акции</a></li>
+              <li><a href="calc.html">Калькулятор</a></li>
+              <li><a href="works.html">Работы и отзывы</a></li>
+              <li><a href="blog.html">Блог</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="footer-container">
+            <div class="footer-address">
+              <div>Адрес: Москва, Лужнецкая набережная д 2/3стр. 23Б <a href="">Показать на карте</a></div>
+              <div>Тел: +7 (495) 000-00-00 </div>
+            </div>
+            <div class="footer-social">
+              <div class="social">
+                <div class="social__item">
+                  <img class="social__image" src="./assets/img/skype.svg" alt="skype">
+                  <div class="social__title">Skype</div>
+                </div>
+                <div class="social__item">
+                  <img class="social__image" src="./assets/img/whatsapp.svg" alt="skype">
+                  <div class="social__title">WhatsApp</div>
+                </div>
+                <div class="social__item">
+                  <img class="social__image" src="./assets/img/email.svg" alt="skype">
+                  <div class="social__title">Email</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy">Все права защищены, 2021</div>
+      <div class="footer-line"></div>
+    </footer>
+  </body>
+</html>

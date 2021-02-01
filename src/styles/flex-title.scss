@@ -1,0 +1,28 @@
+.flex-title {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 700px) {
+      flex-wrap: nowrap;
+    }
+  }
+  &__text {
+    width: 100%;
+    font-size: 15px;
+    line-height: 20px;
+    @media screen and (min-width: 1100px) {
+      font-size: 17px;
+      line-height: 35px;
+    }
+    h1 {
+      line-height: 30px;
+    }
+  }
+  &__image {
+    width: 100%;
+  }
+  &__img {
+    display: block;
+    margin: auto;
+  }
+}
