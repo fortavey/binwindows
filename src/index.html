@@ -16,6 +16,8 @@
           <div class="logo">
             <a href="/"><img class="logo__image" src="./assets/img/logo.png" alt="logo"></a>
           </div>
+          <div class="fixed-header-block"><a href="calc.html">Калькулятор</a></div>
+          <div class="fixed-header-block"><a href="works.html">Отзывы</a></div>
           <div class="site-header-info">
             <span class="use-msgs">Задайте вопрос на прямую в:</span>
             <div class="social">
@@ -51,7 +53,22 @@
               <li class="menu-item-has-children">
                 <a href="services.html">Услуги</a>
                 <ul class="sub-menu">
-                  <li><a href="service.html">Ремонт пластиковых окон</a></li>
+                  <li class="menu-item-has-children">
+                    <a href="service.html">Ремонт пластиковых окон</a>
+                    <ul class="sub-menu">
+                      <li><a href="">Регулировка</a></li>
+                      <li><a href="">Замена уплотнителя</a></li>
+                      <li><a href="">Устранение запотевания</a></li>
+                      <li><a href="">Устранение продувания</a></li>
+                      <li><a href="">Замена оконных створок</a></li>
+                      <li><a href="">Замена битого стеклопакета</a></li>
+                      <li><a href="">Замена ручки</a></li>
+                      <li><a href="">Герметизация и шумоизоляция</a></li>
+                      <li><a href="">Утепление</a></li>
+                      <li><a href="">Ремонт ПВХ дверей</a></li>
+                      <li><a href="">Замена фурнитуры</a></li>
+                    </ul>
+                  </li>
                   <li><a href="service.html">Ремонт деревянных окон</a></li>
                   <li><a href="service.html">Ремонт аллюминиевых окон</a></li>
                   <li><a href="service.html">Москитные сетки</a></li>
@@ -95,7 +112,8 @@
           </div>
           <div class="main-slider__reviews">
             <div class="main-slider__video">
-              <div class="main-slider__video-button">
+              <video-popup v-if="showPopup" @hidepopup="hidePopup"></video-popup>
+              <div class="main-slider__video-button" @click="showPopup = true">
               </div>
               <div class="main-slider__video-text">
                 <div class="line">
@@ -645,7 +663,6 @@
               <div class="questions__ansver">
                 Поперечная горизонтальная перекладина - импост, обязательно ставится на сетки, размер которых превышает 1м. Импост (распаковка) необходим для повышения надёжности констркции и препятствует её деформации
               </div>
-              <div class="questions__more"><a href="">Читать полностью</a></div>
             </div>
             <div class="questions__item">
               <div class="questions__author">Вопрос от Константина, 15 января 2019</div>
@@ -656,12 +673,11 @@
               <div class="questions__ansver">
                 Поперечная горизонтальная перекладина - импост, обязательно ставится на сетки, размер которых превышает 1м. Импост (распаковка) необходим для повышения надёжности констркции и препятствует её деформации
               </div>
-              <div class="questions__more"><a href="">Читать полностью</a></div>
             </div>
 
           </div>
           <div class="questions__form">
-            <div class="questions__see-more">Смотреть все вопросы</div>
+            <div class="questions__see-more">Заказать звонок</div>
             <div class="questions__add-question">Задать вопрос мастеру</div>
           </div>
           <div class="questions__image"><img src="./assets/img/questions.png" alt="img"></div>

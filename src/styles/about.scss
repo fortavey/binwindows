@@ -1,0 +1,29 @@
+.about {
+  padding: 0 10px;
+  &__container {
+    display: flex;
+  }
+  &__item {
+    line-height: 25px;
+    @media screen and (min-width: 1000px) {
+      width: 50%;
+      min-height: 600px;
+    }
+    &--first {
+      display: none;
+      background-repeat: no-repeat;
+      background-position: 100%;
+      width: 41%;
+      @media screen and (min-width: 1000px) {
+        margin-right: 42px;
+        display: block;
+      }
+    }
+    &--last {
+      @media screen and (min-width: 1000px) {
+        max-width: 730px;
+        line-height: 42px;
+      }
+    }
+  }
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Webpack App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src='https://unpkg.com/v-calendar'></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <body class="not-main">
+    <header class="site-header">
+      <div class="top-line">
+        <div class="wrapper top-line__container">
+          <div class="logo">
+            <a href="/"><img class="logo__image" src="./assets/img/logo.png" alt="logo"></a>
+          </div>
+          <div class="fixed-header-block"><a href="calc.html">Калькулятор</a></div>
+          <div class="fixed-header-block"><a href="works.html">Отзывы</a></div>
+          <div class="site-header-info">
+            <span class="use-msgs">Задайте вопрос на прямую в:</span>
+            <div class="social">
+              <div class="social__item">
+                <img class="social__image" src="./assets/img/skype.svg" alt="skype">
+                <div class="social__title">Skype</div>
+              </div>
+              <div class="social__item">
+                <img class="social__image" src="./assets/img/whatsapp.svg" alt="skype">
+                <div class="social__title">WhatsApp</div>
+              </div>
+              <div class="social__item">
+                <img class="social__image" src="./assets/img/email.svg" alt="skype">
+                <div class="social__title">Email</div>
+              </div>
+            </div>
+            <div class="top-info">
+              <div class="phone"><img src="./assets/img/phone.svg" alt="icon">+7 459 445 15 51</div>
+              <div class="work-time">Прием заявок с <strong>7:00</strong> до <strong>23:00</strong> без выходных</div>
+            </div>
+          </div>
+          <div class="menu-button">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+          </div>
+        </div>
+      </div>
+      <div class="menu-line">
+        <div class="wrapper">
+          <nav>
+            <ul>     
+              <li class="menu-item-has-children">
+                <a href="services.html">Услуги</a>
+                <ul class="sub-menu">
+                  <li><a href="service.html">Ремонт пластиковых окон</a></li>
+                  <li><a href="service.html">Ремонт деревянных окон</a></li>
+                  <li><a href="service.html">Ремонт аллюминиевых окон</a></li>
+                  <li><a href="service.html">Москитные сетки</a></li>
+                  <li><a href="service.html">Аксессуары</a></li>
+                  <li><a href="service.html">Замена стеклопакетов</a></li>
+                  <li><a href="service.html">Жалюзи</a></li>
+                </ul>
+              </li>
+              <li><a href="about.html">О компании</a></li>
+              <li><a href="price.html">Цены</a></li>
+              <li><a href="sales.html">Акции</a></li>
+              <li><a href="calc.html">Калькулятор</a></li>
+              <li><a href="works.html">Работы и отзывы</a></li>
+              <li><a href="blog.html">Блог</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <p id="breadcrumbs">
+        <span>
+          <span>
+            <a href="/">Главная</a> / 
+            <span>
+              <span class="breadcrumb_last" aria-current="page">Контакты</span>
+            </span>
+          </span>
+        </span>
+      </p>        
+    </div>
+    <div class="interval" style="height: 50px;"></div>
+    <div class="wrapper">
+      <div style="display:flex;flex-wrap:wrap;">
+        <div style="flex-grow: 1;">
+          <h1>Контакты</h1>
+          <p>
+            Название компании
+          </p>
+          <p>
+            Адрес	
+          </p>
+          <p>
+            График работы	ежедневно: 
+          </p>
+          <p>
+            Телефон	
+          </p>
+          <p>
+            E-mail
+          </p>
+          </p>
+        </div>
+        <div style="flex-grow: 1;">
+          <h2>Реквизиты</h1>
+          <p>
+            Полное наименование
+          </p>
+          <p>
+            Местонахождение
+          </p>
+          <p>
+            Почтовый адрес
+          </p>
+          <p>
+            Почтовый адрес
+          </p>
+          <p>
+            ИНН
+          </p>
+          <p>
+            КПП
+          </p>
+          <p>
+            ОГРН
+          </p>
+          <p>
+            Расчетный счет
+          </p>
+          <p>
+            Банк получателя	
+          </p>
+          <p>
+            БИК	
+          </p>
+          <p>
+            К/с	
+          </p>
+        </div>
+      </div>
+    </div>  
+
+   <div class="interval" style="height: 95px;"></div>
+    <h2 style="text-align: center;">Этапы работы</h2>
+    <div class="interval" style="height: 41px;"></div>
+    <div class="stages">
+      <div class="wrapper">
+        <div class="stages__container">
+          <div class="stages__list">
+            <div class="stage">
+              <div class="stage__image">
+                <div class="stage__number">1</div>
+                <img class="stage__img" src="./assets/img/stage1.png" alt="img">
+              </div>
+              <div class="stage__text">Мастер приежет на указанный адресс и оценит стоимость работ</div>
+            </div>
+            <div class="stage">
+              <div class="stage__image">
+                <div class="stage__number">2</div>
+                <img class="stage__img" src="./assets/img/stage2.png" alt="img">
+              </div>
+              <div class="stage__text">Заключаем договор и приступаем к ремонту БЕЗ ПРЕДОПЛАТЫ</div>
+            </div>
+            <div class="stage">
+              <div class="stage__image">
+                <div class="stage__number">3</div>
+                <img class="stage__img" src="./assets/img/stage3.png" alt="img">
+              </div>
+              <div class="stage__text">Выполняем ремонт и Вы принимаете работу</div>
+            </div>
+            <div class="stage">
+              <div class="stage__image">
+                <div class="stage__number">4</div>
+                <img class="stage__img" src="./assets/img/stage4.png" alt="img">
+              </div>
+              <div class="stage__text">Подписываем Договор (гарантия). Оплачиваете. Вручаем Вам подарок</div>
+            </div>
+          </div>
+          <img src="./assets/img/stages.png" alt="img" class="stages__img">
+          <div class="visit-form"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="interval" style="height: 136px;"></div>
+    <h2 style="text-align: center;">Работаем по всей Москве и Московской области</h2>
+    <div class="interval" style="height: 62px;"></div>
+    <img src="./assets/img/map.png" alt="map" style="min-height: 300px;object-fit: cover;">
+
+    <footer class="site-footer">
+      <div class="footer-line"></div>
+      <div class="wrapper">
+        <div class="footer-logo">
+          <div class="logo">
+            <a href="/"><img class="logo__image" src="./assets/img/logo.png" alt="logo"></a>
+          </div>
+        </div>
+        <div style="flex-grow: 1;">
+          <nav>
+            <ul>     
+              <li class="menu-item-has-children">
+                <a href="services.html">Услуги</a>
+                <ul class="sub-menu">
+                  <li><a href="service.html">Ремонт пластиковых окон</a></li>
+                  <li><a href="service.html">Ремонт деревянных окон</a></li>
+                  <li><a href="service.html">Ремонт аллюминиевых окон</a></li>
+                  <li><a href="service.html">Москитные сетки</a></li>
+                  <li><a href="service.html">Аксессуары</a></li>
+                  <li><a href="service.html">Замена стеклопакетов</a></li>
+                  <li><a href="service.html">Жалюзи</a></li>
+                </ul>
+              </li>
+              <li><a href="about.html">О компании</a></li>
+              <li><a href="price.html">Цены</a></li>
+              <li><a href="sales.html">Акции</a></li>
+              <li><a href="calc.html">Калькулятор</a></li>
+              <li><a href="works.html">Работы и отзывы</a></li>
+              <li><a href="blog.html">Блог</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="footer-container">
+            <div class="footer-address">
+              <div>Адрес: Москва, Лужнецкая набережная д 2/3стр. 23Б <a href="">Показать на карте</a></div>
+              <div>Тел: +7 (495) 000-00-00 </div>
+            </div>
+            <div class="footer-social">
+              <div class="social">
+                <div class="social__item">
+                  <img class="social__image" src="./assets/img/skype.svg" alt="skype">
+                  <div class="social__title">Skype</div>
+                </div>
+                <div class="social__item">
+                  <img class="social__image" src="./assets/img/whatsapp.svg" alt="skype">
+                  <div class="social__title">WhatsApp</div>
+                </div>
+                <div class="social__item">
+                  <img class="social__image" src="./assets/img/email.svg" alt="skype">
+                  <div class="social__title">Email</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy">Все права защищены, 2021</div>
+      <div class="footer-line"></div>
+    </footer>
+  </body>
+</html>

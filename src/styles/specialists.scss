@@ -36,6 +36,7 @@
     border: 1px solid #21b021;
     display: block;
     margin: auto;
+    object-fit: cover;
   }
   &__title {
     text-align: center;
@@ -72,6 +73,7 @@
     border: 1px solid #21b021;
     display: block;
     margin: auto;
+    object-fit: cover;
     @media screen and (min-width: 600px){
       margin-right: 30px;
     }
@@ -148,6 +150,7 @@
     display: none;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     @media screen and (min-width: 500px){
       display: flex;
     }

@@ -1,0 +1,26 @@
+.works {
+  &__cont {
+    margin-top: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  &__item {
+    margin: 0 10px 34px;
+    width: 270px;
+  }
+  &__desc {
+    font-size: 22px;
+    line-height: 25px;
+    padding: 15px 0;
+  }
+  &__addr {
+    font-size: 22px;
+    line-height: 25px;
+    font-style: italic;
+    color: #696161;
+  }
+}
+.rev__cont {
+  margin-top: 34px;
+}

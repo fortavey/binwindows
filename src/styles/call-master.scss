@@ -1,0 +1,114 @@
+.call-master-form {
+  background-color: #957C3F;
+  padding: 30px 0 40px;
+  &__container {
+    max-width: 920px;
+    margin: auto;
+    padding: 10px;
+    .visit-form {
+      @media screen and (min-width: 500px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      &__title {
+        margin-bottom: 30px;
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 47px;
+        line-height: 22px;
+        width: 100%;
+      }
+      &__item {
+        height: 47px;
+        background: #FFFFFF;
+        border: 1px solid #21B021;
+        box-sizing: border-box;
+        box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        margin-bottom: 40px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 12px;
+        font-weight: 500;
+        cursor: pointer;
+        @media screen and (min-width: 500px) {
+          width: calc(50% - 18px);
+        }
+        &.yes-select::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 7px 3.5px 0 3.5px;
+          border-color: #000000 transparent transparent transparent;
+          position: absolute;
+          top: 50%;
+          right: 10px;
+        }
+        span.sp {
+          font-weight: normal;
+          position: absolute;
+          bottom: calc(100% + 5px);
+          color: #fff;
+          left: 0;
+        }
+      }
+      &__phone {
+      }
+      &__date {
+        width: 100%;
+      }
+      &__district {
+      }
+      &__repair-type {
+      }
+      input {
+        &[type=date] {
+          border: none;
+          width: 100%;
+          outline: none;
+  
+        }
+        &[type=tel] {
+          border: none;
+          width: 100%;
+          outline: none;
+          background-color: transparent;
+        }
+      }
+      &__submit {
+        height: 47px;      
+        background: linear-gradient(110.58deg, #2D5F5D 32.13%, #265077 63.65%), #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.41);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff; 
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        width: 100%;
+        max-width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  &__title {
+    font-size: 27px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 25px;
+    @media screen and (min-width: 500px) {
+      font-size: 36px;
+    }
+  }
+}

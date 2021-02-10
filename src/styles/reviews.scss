@@ -12,7 +12,7 @@
     }
 }
 .review {
-  height: 236px;
+  min-height: 236px;
   background: linear-gradient(180.39deg, #FFFFFF 0.34%, #ECECEC 99.66%), #AFAFAF;
   box-shadow: -4px -4px 25px rgba(0, 0, 0, 0.09);
   border-radius: 15px;
@@ -43,6 +43,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: auto;
+    padding-top: 10px;
   }
   &__city {
   }

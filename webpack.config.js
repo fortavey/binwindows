@@ -65,6 +65,7 @@ module.exports = {
         new HtmlWebpackPlugin({ filename: 'price.html', template: './pages/price.html' }),
         new HtmlWebpackPlugin({ filename: 'sales.html', template: './pages/sales.html' }),
         new HtmlWebpackPlugin({ filename: 'works.html', template: './pages/works.html' }),
+        new HtmlWebpackPlugin({ filename: 'post.html', template: './pages/post.html' }),
         new CleanWebpackPlugin(),
         new CopyPlugin({
             patterns:[

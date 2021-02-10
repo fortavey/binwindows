@@ -1,7 +1,12 @@
 import '@/styles/style.scss';
 import '@/js/menu.js';
-console.log("start");
 import '@/js/sub-menu.js';
+import '@/js/header.js';
 import '@/js/specialists-slider.js';
 import '@/js/visit-form.js';
 import '@/js/service-works.js';
+import '@/js/works-and_reviews.js';
+import '@/js/windows-calc.js';
+import '@/js/grids-calc.js';
+import '@/js/calc.js';
+import '@/js/video.js';
