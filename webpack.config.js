@@ -79,9 +79,9 @@ module.exports = {
             filename: 'style.css'
         }),
         require('autoprefixer'),
-        new webpack.SourceMapDevToolPlugin({
-            filename: '[file].map'
-        }),
+        // new webpack.SourceMapDevToolPlugin({
+        //     filename: '[file].map'
+        // }),
     ],
     module: {
         rules: [

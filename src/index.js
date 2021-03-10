@@ -1,4 +1,5 @@
 import '@/styles/style.scss';
+import '@/js/v-menu.js';
 import '@/js/menu.js';
 import '@/js/sub-menu.js';
 import '@/js/header.js';

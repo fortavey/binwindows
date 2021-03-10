@@ -46,47 +46,158 @@
           </div>
         </div>
       </div>
+      <div class="mobile-menu">
+        <div class="mobile-menu__top-line">
+          <div class="mobile-menu__services" @click="currentElement(1)" :class="current == 1 ? 'active' : ''">Услуги</div>
+          <div class="mobile-menu__about" @click="currentElement(2)" :class="current == 2 ? 'active' : ''">О нас</div>
+          <div class="mobile-menu__connect" @click="currentElement(3)" :class="current == 3 ? 'active' : ''">Связь</div>
+        </div>
+        <div class="mobile-menu__workblock">
+          <div class="mobile-menu__services-block" v-if="current === 1">
+            <nav>
+              <ul v-for="services in menu" v-if="services.classes.includes('v-services')">
+                <li v-for="(item, index) in services.children" v-if="(!activeSubMenu.length || activeSubMenu.includes(index))">
+                  <div class="in-li">
+                    <div class="menu-operator" 
+                          @click="changeActiveSubMenu(index)" 
+                          :class="activeSubMenu.includes(index) ? 'active' : ''">
+                      <span></span><span></span>
+                    </div>
+                    <a href="">{{ item.title }}</a>
+                  </div>
+                  <div class="mobile-sub" v-if="activeSubMenu.includes(index)">
+                    <ul>
+                      <li v-for="subItem in item.children">
+                        <a href="">{{ subItem.title }}</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+              </ul>
+            </nav>
+          </div>
+          <div class="mobile-menu__about-block" v-if="current === 2">
+            <nav>
+              <ul>
+                <li v-for="item in menu" v-if="!item.classes.includes('v-services')">
+                    <a href="">{{ item.title }}</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="mobile-menu__connect-block" v-if="current === 3">
+            <div class="mobile-menu__phone">
+              <span style="color: #19D2DE;">Бесплатная консультация:</span> <br>
+              8 925 041 66 73, <br> 
+              8 495 266 61 01 <br>
+              Mosremokna@list.ru
+            </div>
+            <div class="mobile-menu__social">
+              <div class="mobile-menu__social-item">
+                <img src="./assets/img/whatsapp1.svg" alt="icon">
+                WhatsApp
+              </div>
+              <div class="mobile-menu__social-item">
+                <img src="./assets/img/viber1.svg" alt="icon">
+                Viber
+              </div>
+              <div class="mobile-menu__social-item">
+                <img src="./assets/img/telegram1.svg" alt="icon">
+                Telegram
+              </div>
+              <div class="mobile-menu__social-item">
+                <img src="./assets/img/skype1.svg" alt="icon">
+                Skype
+              </div>
+              <div class="mobile-menu__social-item">
+                <img src="./assets/img/vk1.svg" alt="icon">
+                Вконтакте
+              </div>
+              <div class="mobile-menu__social-item">
+                <img src="./assets/img/instagram1.svg" alt="icon">
+                Instagram
+              </div>
+              <div class="mobile-menu__social-item">
+                <img src="./assets/img/facebook1.svg" alt="icon">
+                Facebook
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="menu-line">
         <div class="wrapper">
           <nav>
-            <ul>     
-              <li class="menu-item-has-children">
-                <a href="services.html">Услуги</a>
-                <ul class="sub-menu">
-                  <li class="menu-item-has-children">
-                    <a href="service.html">Ремонт пластиковых окон</a>
-                    <ul class="sub-menu">
-                      <li><a href="">Регулировка</a></li>
-                      <li><a href="">Замена уплотнителя</a></li>
-                      <li><a href="">Устранение запотевания</a></li>
-                      <li><a href="">Устранение продувания</a></li>
-                      <li><a href="">Замена оконных створок</a></li>
-                      <li><a href="">Замена битого стеклопакета</a></li>
-                      <li><a href="">Замена ручки</a></li>
-                      <li><a href="">Герметизация и шумоизоляция</a></li>
-                      <li><a href="">Утепление</a></li>
-                      <li><a href="">Ремонт ПВХ дверей</a></li>
-                      <li><a href="">Замена фурнитуры</a></li>
+            <ul>
+              <li v-for="item in menu"
+                  :class="item.children.length ? 'menu-item-has-children' : ''"    
+              >
+                <a href="">{{ item.title }}</a>
+                <ul class="sub-menu" v-if="item.children.length">
+                  <li v-for="subItem in item.children"
+                      :class="subItem.children.length ? 'menu-item-has-children' : ''"  
+                  >
+                    <a href="">{{ subItem.title }}</a>
+                    <ul class="sub-menu" v-if="subItem.children.length">
+                      <li v-for="subSubItem in subItem.children"
+                      >
+                      <a href="">{{ subSubItem.title }}</a>
+                      </li>
                     </ul>
                   </li>
-                  <li><a href="service.html">Ремонт деревянных окон</a></li>
-                  <li><a href="service.html">Ремонт аллюминиевых окон</a></li>
-                  <li><a href="service.html">Москитные сетки</a></li>
-                  <li><a href="service.html">Аксессуары</a></li>
-                  <li><a href="service.html">Замена стеклопакетов</a></li>
-                  <li><a href="service.html">Жалюзи</a></li>
                 </ul>
-              </li>
-              <li><a href="about.html">О компании</a></li>
-              <li><a href="price.html">Цены</a></li>
-              <li><a href="sales.html">Акции</a></li>
-              <li><a href="calc.html">Калькулятор</a></li>
-              <li><a href="works.html">Работы и отзывы</a></li>
-              <li><a href="blog.html">Блог</a></li>
-              <li><a href="contacts.html">Контакты</a></li>
+              </li>  
             </ul>
           </nav>
         </div>
+      </div>
+      <div class="menu-footer">
+          <div class="menu-footer__top">
+            <nav>
+              <ul>
+                <li v-for="item in menu">
+                  <a href="">{{ item.title }}</a>
+                </li>  
+              </ul>
+            </nav>
+            <div class="menu-footer__email">
+              Mosremokna@list.ru
+            </div>
+          </div>
+          <div class="menu-footer__bottom">
+            <div class="menu-footer__phone"><span style="color: #19D2DE;font-weight: 500;">Бесплатная консультация:</span> 8 925 041 66 73, 8 495 266 61 01 </div>
+            <div class="menu-footer__social">
+              <div class="menu-footer__social-item">
+                <img src="./assets/img/whatsapp1.svg" alt="icon">
+                WhatsApp
+              </div>
+              <div class="menu-footer__social-item">
+                <img src="./assets/img/viber1.svg" alt="icon">
+                Viber
+              </div>
+              <div class="menu-footer__social-item">
+                <img src="./assets/img/telegram1.svg" alt="icon">
+                Telegram
+              </div>
+              <div class="menu-footer__social-item">
+                <img src="./assets/img/skype1.svg" alt="icon">
+                Skype
+              </div>
+              <div class="menu-footer__social-item">
+                <img src="./assets/img/vk1.svg" alt="icon">
+                Вконтакте
+              </div>
+              <div class="menu-footer__social-item">
+                <img src="./assets/img/instagram1.svg" alt="icon">
+                Instagram
+              </div>
+              <div class="menu-footer__social-item">
+                <img src="./assets/img/facebook1.svg" alt="icon">
+                Facebook
+              </div>
+            </div>
+          </div>
       </div>
     </header>
     <div class="main-slider" style="background-image: url(./assets/img/main-slider.png);">
