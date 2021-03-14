@@ -4,44 +4,7 @@ if(document.querySelectorAll('.specialists').length) {
 const sliderVue = new Vue({
   el: '.specialists',
   data: {
-    list: [
-      {
-        name: 'Дмитрий Иванов',
-        positionShort: 'Мастер',
-        positionFull: 'Мастер компании “Бин окна”',
-        expirience: '9 лет',
-        education: 'высшее',
-        desc: 'Что бы хорошо жить, нужно много работать. А для того, что бы стать богатым нужно придумать  что-то другое.',
-        image: './assets/img/spec.png',
-      },
-      {
-        name: 'Юрий Николаев',
-        positionShort: 'Мастер',
-        positionFull: 'Технолог компании “Бин окна”',
-        expirience: '39 лет',
-        education: 'среднее',
-        desc: 'Ценно лишь то, чем вы можете насладиться.',
-        image: './assets/img/spec1.png',
-      },
-      {
-        name: 'Юлия Юрашкевич',
-        positionShort: 'Оператор',
-        positionFull: 'Оператор компании “Бин окна”',
-        expirience: '5 лет',
-        education: 'высшее',
-        desc: 'Ничто не подмочит репутацию нашего качества.',
-        image: './assets/img/spec2.jpg',
-      },
-      {
-        name: 'Сергей Миронов',
-        positionShort: 'Мастер',
-        positionFull: 'Мастер компании “Бин окна”',
-        expirience: '5 лет',
-        education: 'среднее',
-        desc: 'Если любите прохладу, свежий воздух круглый год – обращайтесь на Московский вентиляторный завод!',
-        image: './assets/img/spec3.jpg',
-      },
-    ],
+    list: [],
     currentIndex: 0,
   },
   computed: {
@@ -68,7 +31,13 @@ const sliderVue = new Vue({
     changeIndexOnClick(index) {
       this.currentIndex = index;
     }
-  }
+  },
+  created() {
+    fetch(`${location.origin}/wp-admin/admin-ajax.php?action=spec`)
+    .then(res => res.json())
+    .then(data => this.list.push(...data))
+    .catch(err => console.log(err));
+  },
 });
 
 }

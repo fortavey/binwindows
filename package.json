@@ -38,10 +38,6 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
-    "bootstrap": "^4.5.3",
-    "normalize.css": "^8.0.1",
-    "v-calendar": "^2.2.2",
-    "vue": "^2.6.12"
+    "@babel/polyfill": "^7.12.1"
   }
 }

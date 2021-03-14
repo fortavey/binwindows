@@ -117,6 +117,9 @@ body{
   &__title {
     font-size: 12px;
     text-decoration: underline;
+    a {
+      color: inherit;
+    }
   }
   .top-line & {
     display: none;

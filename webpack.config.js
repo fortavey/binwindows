@@ -42,7 +42,7 @@ module.exports = {
             '@': path.resolve(__dirname, 'src')
         }
     },
-    devtool: 'eval-cheap-source-map',
+    // devtool: 'eval-cheap-source-map',
     devServer: {
       publicPath: '/',
       port: 9000,
