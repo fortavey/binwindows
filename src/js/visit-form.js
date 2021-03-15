@@ -37,7 +37,7 @@ const visitFormVue = new Vue({
             <div class="choose-district choose-value" 
                   :style="districtStyle"
                   @click="changeDistrictShow(false)">
-              <div class="choose-value__close"><img src="./assets/img/close.svg" alt="close"></div>
+              <div class="choose-value__close"><img src="${location.origin}/wp-content/themes/binwindows/assets/img/close.svg" alt="close"></div>
               <div class="choose-value__title">Выберите район</div>
               <div class="choose-value__container">
                 <div class="choose-value__item"
