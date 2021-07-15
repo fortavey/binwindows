@@ -59,6 +59,7 @@ const vMenu = new Vue({
         this.menu.push(newEl);
       });
     })
-    .catch(err => console.log(err));
+    .catch(err => console.log(err))
+    .finally(e => document.querySelector(".f-loader").style.display="none");
   }
 });

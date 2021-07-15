@@ -17,7 +17,7 @@ Vue.component('grids-calc', {
   <div class="grids__cont">
     <div class="grid__image">
       <input type="range" min="0" max="3000" class="range range-vertical" v-model="height">
-      <img src="./assets/img/grid.png">
+      <img src="/wp-content/themes/binwindows/assets/img/grid.png">
       <input type="range" min="0" max="3000" class="range range-horizontal" v-model="width">
     </div>
     <div class="grid__info">

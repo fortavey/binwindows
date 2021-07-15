@@ -7,7 +7,7 @@ const visitFormVue = new Vue({
   <div class="visit-form">
           <div class="visit-form__title">
               Вызвать мастера <strong>БЕСПЛАТНО</strong> <br>
-              по тел: +7 (495) 000-00-00 <br>
+              по тел: +7 495 266 61 03 <br>
               или <br>
               <strong>заполните форму</strong>
             </div>
@@ -32,7 +32,7 @@ const visitFormVue = new Vue({
                 <input type="tel" placeholder="Ваш телефон" v-model="phone">
               </div>
             </div>
-            <div class="visit-form__submit">Вызвать мастера</div>
+            <div class="visit-form__submit" @click="submit">Вызвать мастера</div>
 
             <div class="choose-district choose-value" 
                   :style="districtStyle"
@@ -63,6 +63,7 @@ const visitFormVue = new Vue({
                 </div>
               </div>
             </div>
+            <div class="send-message" v-if="showSendWindow" @click="showSendWindow=false"><p style="text-align:center">{{ msgs }}</p></div>
   </div>
   `,
   data: {
@@ -74,7 +75,8 @@ const visitFormVue = new Vue({
     phone: '',
     showCalendar: false,
     showDistrict: false,
-    showType: false
+    showType: false,
+    showSendWindow: false
   },
   computed: {
     calendarStyle() {
@@ -108,17 +110,33 @@ const visitFormVue = new Vue({
     },
     setType(index) {
       this.repairType = this.repairTypes[index];
-    }
+    },
+    submit(){
+      if(this.phone.length > 9){
+          document.querySelector('.hidden-full-form .ff-type').value = this.repairType;
+          document.querySelector('.hidden-full-form .ff-district').value = this.district;
+          document.querySelector('.hidden-full-form .ff-date').value = this.date;
+          document.querySelector('.hidden-full-form .ff-phone').value = this.phone;
+          document.querySelector('.hidden-full-form input[type=submit]').click();
+          this.showSendWindow = true;
+          this.msgs = 'Ваша заявка отправлена!';
+          this.phone = '';
+          this.name = '';
+      }else{
+          this.showSendWindow = true;
+          this.msgs = 'Введите корректные данные!';
+      }
+    },
   },
   created(){
-    const types = [
+    let types = [
       'Утепление окон', 
       'Регулировка', 
       'Замена уплотнителя', 
       'Устранение запотевания',
       'Замена ручки'
     ];
-    const districts = [
+    let districts = [
       'Академический',
       'Алексеевский',
       'Алтуфьевский',
@@ -136,9 +154,18 @@ const visitFormVue = new Vue({
       'Бутырский',
       'Вешняки',
     ]
-    this.repairTypes.push(...types);
-    this.districts.push(...districts);
-    this.repairType = this.repairTypes[0];
+    fetch(location.origin+"/wp-admin/admin-ajax.php?action=form")
+    .then(res => res.json())
+    .then(data => {
+      districts = data.districts.split('\r\n');
+      types = data.serviceType.split('\r\n');
+    })
+    .catch(err => console.log(err))
+    .finally(e => {
+      this.repairTypes.push(...types);
+      this.districts.push(...districts);
+      this.repairType = this.repairTypes[0];
+    })
   }
 });
 

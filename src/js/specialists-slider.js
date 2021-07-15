@@ -1,5 +1,5 @@
-try{
 if(document.querySelectorAll('.specialists').length) {
+try{
 
 const sliderVue = new Vue({
   el: '.specialists',
@@ -40,5 +40,5 @@ const sliderVue = new Vue({
   },
 });
 
-}
 }catch(err){console.log(err);}
+}

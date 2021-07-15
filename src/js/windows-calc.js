@@ -65,7 +65,7 @@ Vue.component('window-calc', {
     const windowsList = [
       {
         name: 'Пластиковое окно',
-        image: '../assets/img/service1.png',
+        image: '/wp-content/themes/binwindows/assets/img/service1.png',
         items: [
           {
             name: 'Стандарт',
@@ -196,7 +196,7 @@ Vue.component('window-calc', {
       },
       {
         name: 'Деревянное окно',
-        image: '../assets/img/service2.png',
+        image: '/wp-content/themes/binwindows/assets/img/service2.png',
         items: [
           {
             name: 'Замена фурнитуры',
@@ -282,7 +282,7 @@ Vue.component('window-calc', {
       },
       {
         name: 'Аллюминиевое окно',
-        image: '../assets/img/service3.png',
+        image: '/wp-content/themes/binwindows/assets/img/service3.png',
         items: [
           {
             name: 'Аксессуары',
